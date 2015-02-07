@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+        sessions: 'sessions'
+      }
    get '/home' => 'home#index' 
 
   root 'home#index'
+
+   get '/home' => 'home#index'
+
+   resource :users, only: [:new, :create]
+
 
 
   namespace :api, defaults: { format: "json" } do
     resources :images, only: :index
   end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

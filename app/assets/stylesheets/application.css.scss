@@ -1,0 +1,88 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+// Distance
+$pushed: 250px;
+$header-height: 60px;
+
+
+
+.max-height
+{
+  min-height: 100%;
+}
+
+.max-width
+{
+  width: 100%;
+}
+
+.top-layer
+{
+  z-index: 10;
+}
+
+
+// animations
+
+
+.push-menu
+{
+  @extend .max-height;
+  @extend .top-layer;
+  width: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #424242;
+  transition: width 0.5s ease;
+  button
+  {
+    width: 100%;
+    margin: 10px 0;
+    color: white;
+    background-color: #6E6E6E;
+    border: 0;
+    padding: 10px;
+    a
+    {
+      color: #fff;
+    }   
+  }
+}
+
+.pushed-menu
+{
+  width: $pushed;
+}
+
+.body-pushed
+{
+  left: -$pushed;
+}
+
+// HTML & Body
+
+body
+{
+  position: relative;
+  left: 0px;
+  transition: left .5s ease;
+}

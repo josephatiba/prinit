@@ -6,9 +6,17 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body ng-controller="MainController as main">
+<body ng-controller="MainController as main" ng-class="{true: 'body-pushed'}[main.pushmenu]">
+
+
+
+<%= render 'shared/header' %>
+
+<div id="view-container" class="container-fluid" ng-click="main.pushmenu = false">
 
 <%= yield %>
+
+</div>
 
 </body>
 </html>

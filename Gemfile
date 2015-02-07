@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'better_errors'
+gem 'binding_of_caller'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
@@ -29,6 +32,9 @@ gem 'angular-rails-templates'
 gem 'angularjs-rails'
 gem 'bcrypt'
 gem 'bower-rails'
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'devise'
+gem 'omniauth', '~> 1.2.2'
 
 
 # Use ActiveModel has_secure_password
