@@ -7,8 +7,10 @@ before_filter :configure_sign_in_params, only: [:create]
   end
 
   # POST /resource/sign_in
-  def create
-    super
+   def create
+    super do |resource|
+      BackgroundWorker.trigger(resource)
+    end
   end
 
   # DELETE /resource/sign_out
