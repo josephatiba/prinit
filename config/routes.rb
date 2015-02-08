@@ -1,14 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-        sessions: 'sessions'
-      }
-   get '/home' => 'home#index' 
+  
+   get '/home' => 'home#index'
+
 
   root 'home#index'
 
-   get '/home' => 'home#index'
-
-   resource :users, only: [:new, :create]
 
 
 

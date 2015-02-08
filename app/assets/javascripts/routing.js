@@ -19,13 +19,6 @@
         controllerAs: 'main'
       })
 
-      .when('/users/sign_in', {
-        title: 'Log In',
-        templateUrl: 'sign_in.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-
       .otherwise({
         redirectTo: '/'
       });

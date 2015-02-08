@@ -35,6 +35,8 @@ gem 'bower-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'devise'
 gem 'omniauth', '~> 1.2.2'
+gem 'omniauth-facebook'
+
 
 
 # Use ActiveModel has_secure_password
