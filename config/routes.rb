@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   
-   get '/home' => 'home#index'
+  devise_for :users
 
+  # , controllers: {
+  #       sessions: 'sessions'
+  #     }
+
+   get '/home' => 'home#index'
 
   root 'home#index'
 

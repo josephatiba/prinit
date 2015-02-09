@@ -17,13 +17,15 @@
     
     var Image = $resource("http://localhost:3000/api/images/:id", {id: "@_id"});
 
+    var User = $resource("http://localhost:3000/users/:id", {id: "@_id"});
+
     self.imageList = getImages();
 
     // self.addAlbum = addAlbum;
     // self.deleteAlbum = deleteAlbum;
   
 
-    // INDEX - view all todos
+    // INDEX - view all images
     function getImages(){
 
       return Image.query();
