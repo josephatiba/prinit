@@ -36,4 +36,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       redirect_to new_user_registration_url
     end
   end
+
+    def setup
+      request.env['omniauth.strategy'].options['scope'] = flash[:scope] || request.env['omniauth.strategy'].options['scope']
+      render :text => "Setup complete.", :status => 404
+    end
 end
