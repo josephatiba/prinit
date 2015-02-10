@@ -40,5 +40,5 @@ class User
     record if record && record.authenticatable_salt == salt
   end
 
-  has_one :identity
+  embeds_one :identity
 end
