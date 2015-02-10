@@ -15,7 +15,7 @@ class Identity
   field :image, type: String
   field :phone, type: String
   field :urls, type: String
-  embedded_in :user, autosave: true
+  embedded_in :user
 
   def self.find_for_oauth(auth)
     identity = find_or_create_by(provider: auth.provider, uid: auth.uid)
