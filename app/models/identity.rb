@@ -1,4 +1,4 @@
-class Identity
+class Identity < User
   include Mongoid::Document
 
   
