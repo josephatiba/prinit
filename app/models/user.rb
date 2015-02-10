@@ -39,4 +39,6 @@ class User
     record = to_adapter.get(key[0]["$oid"])
     record if record && record.authenticatable_salt == salt
   end
+
+  has_one :identity
 end
