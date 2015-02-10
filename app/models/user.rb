@@ -40,5 +40,5 @@ class User
     record if record && record.authenticatable_salt == salt
   end
 
-  embeds_one :identity, autosave: true
+  embeds_one :identity
 end
