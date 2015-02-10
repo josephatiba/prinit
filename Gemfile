@@ -42,6 +42,7 @@ gem 'omniauth-instagram'
 gem 'twitter'
 gem 'instagram'
 gem 'figaro'
+gem 'rails_12factor', group: :production
 
 
 
