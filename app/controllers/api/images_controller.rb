@@ -18,8 +18,8 @@ module API
     def create
       @image = Image.new(image_params)
 
-      if @post.save
-        redirect_to @post
+      if @image.save
+        redirect_to @image
       else
         render 'new'
       end

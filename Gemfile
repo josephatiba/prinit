@@ -47,6 +47,12 @@ gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'thin', group: :production
 
+gem 'carrierwave'
+gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+
+gem 'fog'         # required for Amazon S3
+gem 'mini_magick' # for post-upload image processing
+
 
 
 # Use ActiveModel has_secure_password
