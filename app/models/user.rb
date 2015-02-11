@@ -1,6 +1,5 @@
 class User
   include Mongoid::Document
-  include Mongoid::Timestamps
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, , :validatable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -40,5 +39,5 @@ class User
     record if record && record.authenticatable_salt == salt
   end
 
-  embeds_one :identity
+  embeds_many :identities
 end
