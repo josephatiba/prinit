@@ -37,10 +37,10 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 #     end
 #   end
 
-#     def setup
-#       request.env['omniauth.strategy'].options['scope'] = flash[:scope] || request.env['omniauth.strategy'].options['scope']
-#       render :text => "Setup complete.", :status => 404
-#     end
+    def setup
+      request.env['omniauth.strategy'].options['scope'] = flash[:scope] || request.env['omniauth.strategy'].options['scope']
+      render :text => "Setup complete.", :status => 404
+    end
 # end
 
  skip_before_filter :verify_authenticity_token
