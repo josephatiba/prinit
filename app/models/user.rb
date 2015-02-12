@@ -25,11 +25,11 @@ class User
 
 
 
-   has_many :posts
+  has_many :posts
 
   has_many :identities
 
-  
+
   ## Confirmable
   # field :confirmation_token,   type: String
   # field :confirmed_at,         type: Time

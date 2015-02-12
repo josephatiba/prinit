@@ -20,7 +20,8 @@ class Identity
   # identity = User.identity.new
 
   def self.find_for_oauth(auth)
-    user.identity = find_or_create_by(provider: auth.provider, uid: auth.uid)
+    identity = find_by(provider: auth.provider, uid: auth.uid)
+    identity = create(uid: auth.uid, provider: auth.provider) if identity.nil?
     user.identity.accesstoken = auth.credentials.token
     user.identity.refreshtoken = auth.credentials.refresh_token
     user.uidentity.name = auth.info.name
