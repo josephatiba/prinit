@@ -12,4 +12,6 @@ class Post
     created_at.localtime.strftime("%-m/%-d/%Y | %l:%M %p")
   end
 
+  belongs_to :user
+
 end

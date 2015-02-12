@@ -40,5 +40,7 @@ class User
     record if record && record.authenticatable_salt == salt
   end
 
+  has_many :posts
+
   embeds_many :identities
 end
