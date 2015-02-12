@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+
+   <%= form_for @post do |f| -%>
+
+
+    <div>
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+
+
+    <div>
+      <%= f.label :image %>
+      <%= f.file_field :image %>
+    </div>
+
+
+    <div>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+
+    <div>
+      <%= f.label :public %>
+      <%= f.check_box :public %>
+    </div>
+
+    <div>
+      <%= f.submit 'Share' %>
+    </div>
+
+     <% end %>
+  </div>
+ </div>

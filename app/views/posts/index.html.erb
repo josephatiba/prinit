@@ -1,0 +1,15 @@
+<h1>Discover + Print</h1>
+
+<h2><%= link_to('Upload new images', new_post_path) %></h2>
+
+  <div> 
+
+    <!-- user posts -->
+    <% @posts.each do |post| %>
+      <div class="">
+        <%= link_to image_tag(post.image.url(:tile)), post %>
+        <p class="post-title"><%= link_to post.title, post, class: "user-index-post-title" %></p>
+        </div>  
+    <% end %>  
+   
+</div>

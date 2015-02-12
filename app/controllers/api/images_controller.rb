@@ -4,6 +4,7 @@ module API
     respond_to :json, :html, :xml
     
     def index
+      @images = Image.all
       respond_with Image.all
     end
 
@@ -19,7 +20,7 @@ module API
       @image = Image.new(image_params)
 
       if @image.save
-        redirect_to @image
+        redirect_to images_path
       else
         render 'new'
       end
@@ -45,7 +46,7 @@ module API
     private
 
     def image_params
-      params.require(:image).permit(:url, :name, :private)
+      params.require(:image).permit(:url, :name, :private, :image)
     end
 
   end

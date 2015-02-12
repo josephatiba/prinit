@@ -86,3 +86,15 @@ body
   left: 0px;
   transition: left .5s ease;
 }
+
+
+
+img {
+  max-width: 250px;
+  .post-title 
+  {
+    display: inline-block;
+    position: relative;
+    top: -50px;
+  }
+}
