@@ -1,4 +1,4 @@
-class Devise::SessionsController < DeviseController
+class SessionsController < DeviseController
 #   prepend_before_filter :require_no_authentication, only: [ :new, :create ]
 #   prepend_before_filter :allow_params_authentication!, only: :create
 #   prepend_before_filter :verify_signed_out_user, only: :destroy
@@ -78,4 +78,10 @@ class Devise::SessionsController < DeviseController
 #       format.any(*navigational_formats) { redirect_to after_sign_out_path_for(resource_name) }
 #     end
 #   end
+
+ def create
+    super do |resource|
+      BackgroundWorker.trigger(resource)
+    end
+  end
 end
