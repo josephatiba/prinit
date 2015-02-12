@@ -1,7 +1,5 @@
 class User
   include Mongoid::Document
- 
-  after_create :first_identity
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, , :validatable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :omniauthable
@@ -49,46 +47,27 @@ class User
 
  
 
-#   def twitter
-#     identities.where( :provider => "twitter" ).first
-#   end
-
-#   def twitter_client
-#     @twitter_client ||= Twitter.client( access_token: twitter.accesstoken )
-#   end
-
-#   def facebook
-#     identities.where( :provider => "facebook" ).first
-#   end
-
-#   def facebook_client
-#     @facebook_client ||= Facebook.client( access_token: facebook.accesstoken )
-#   end
-
-#   def instagram
-#     identities.where( :provider => "instagram" ).first
-#   end
-
-#   def instagram_client
-#     @instagram_client ||= Instagram.client( access_token: instagram.accesstoken )
-#   end
-
-
-  def self.from_omniauth(auth)
-    where(auth.slice(:uid, :provider)).first_or_create do |user|
-      user.uid = auth.uid
-      user.provider = auth.provider
-      user.name = auth.info.name
-      user.email = auth.info.email
-      user.image = auth.info.image
-    end
+  def twitter
+    identities.where( :provider => "twitter" ).first
   end
 
+  def twitter_client
+    @twitter_client ||= Twitter.client( access_token: twitter.accesstoken )
+  end
 
+  def facebook
+    identities.where( :provider => "facebook" ).first
+  end
 
-def first_identity
-  self.identities.first_or_create!(:uid => self.uid, :provider => self.provider, :user_id => self.id)
-  Identity.where(:user_id => nil).destroy_all
-end
+  def facebook_client
+    @facebook_client ||= Facebook.client( access_token: facebook.accesstoken )
+  end
 
+  def instagram
+    identities.where( :provider => "instagram" ).first
+  end
+
+  def instagram_client
+    @instagram_client ||= Instagram.client( access_token: instagram.accesstoken )
+  end
 end
