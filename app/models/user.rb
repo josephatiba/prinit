@@ -24,6 +24,12 @@ class User
   field :last_sign_in_ip,    type: String
 
 
+
+   has_many :posts
+
+  has_many :identities
+
+  
   ## Confirmable
   # field :confirmation_token,   type: String
   # field :confirmed_at,         type: Time
@@ -40,7 +46,29 @@ class User
     record if record && record.authenticatable_salt == salt
   end
 
-  has_many :posts
+ 
 
-  embeds_many :identities
+  def twitter
+    identities.where( :provider => "twitter" ).first
+  end
+
+  def twitter_client
+    @twitter_client ||= Twitter.client( access_token: twitter.accesstoken )
+  end
+
+  def facebook
+    identities.where( :provider => "facebook" ).first
+  end
+
+  def facebook_client
+    @facebook_client ||= Facebook.client( access_token: facebook.accesstoken )
+  end
+
+  def instagram
+    identities.where( :provider => "instagram" ).first
+  end
+
+  def instagram_client
+    @instagram_client ||= Instagram.client( access_token: instagram.accesstoken )
+  end
 end
