@@ -1,7 +1,7 @@
 class Identity
   include Mongoid::Document
 
-  embedded_in :user
+  belongs_to :user
   
   validates_presence_of :uid, :provider
   validates_uniqueness_of :uid, :scope => :provider
@@ -25,8 +25,8 @@ class Identity
   end
 
   def self.find_for_oauth(auth)
-    identity = find_by(provider: auth.provider, uid: auth.uid)
     identity = create(uid: auth.uid, provider: auth.provider) if identity.nil?
+    identity = find_by(provider: auth.provider, uid: auth.uid)
     user.identity.accesstoken = auth.credentials.token
     user.identity.refreshtoken = auth.credentials.refresh_token
     user.uidentity.name = auth.info.name
