@@ -9,7 +9,7 @@ class Identity
   field :provider, type: String
   field :accesstoken, type: String
   field :refreshtoken, type: String
-  field :uid, type: Integer
+  field :uid, type: String
   field :name, type: String
   field :email, type: String
   field :nickname, type: String
