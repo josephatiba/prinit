@@ -19,11 +19,6 @@ class Identity
   
 
 
-  def self.serialize_from_session(key, salt)
-    record = to_adapter.get(key[0]["$oid"])
-    record if record && record.authenticatable_salt == salt
-  end
-
   def self.find_for_oauth(auth)
     identity = find_by(provider: auth.provider, uid: auth.uid)
     identity = create(uid: auth.uid, provider: auth.provider) if identity.nil?
