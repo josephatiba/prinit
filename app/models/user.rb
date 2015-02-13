@@ -1,5 +1,9 @@
 class User
   include Mongoid::Document
+  has_many :posts
+
+  has_many :identities, :dependent => :destroy
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, , :validatable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :omniauthable
@@ -23,10 +27,6 @@ class User
   field :last_sign_in_ip,    type: String
 
 
-
-  has_many :posts
-
-  has_many :identities, :dependent => :destroy
 
 
   ## Confirmable
