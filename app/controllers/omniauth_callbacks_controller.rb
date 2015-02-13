@@ -11,6 +11,11 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
       generic_callback( 'twitter' )
     end
 
+    def self.serialize_from_session(key, salt)
+      record = to_adapter.get(key[0]["$oid"])
+      record if record && record.authenticatable_salt == salt
+    end
+
     def generic_callback(provider)
       @identity = Identity.find_for_oauth env["omniauth.auth"]
 
