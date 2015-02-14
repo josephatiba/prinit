@@ -29,11 +29,11 @@ class PictureUploader < CarrierWave::Uploader::Base
 
 
   version :tile do 
-    process :resize_to_fill => [nil, 315]
+    process :resize_to_fit => [nil, 315]
   end
 
   version :post_pic do 
-    process :resize_to_fill => [nil, 400]
+    process :resize_to_fit => [nil, 400]
   end
 
   version :two_to_three do 
@@ -41,7 +41,7 @@ class PictureUploader < CarrierWave::Uploader::Base
   end
 
   version :three_to_four do 
-    process :resize_to_fill => [112.5, 450]
+    process :resize_to_fill => [112, 450]
   end
 
   version :four_to_five do 

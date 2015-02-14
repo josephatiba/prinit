@@ -1,7 +1,7 @@
 
 class PostsController < ApplicationController
-  # before_action :find_post, only: [:show, :edit, :update, :destroy]
-  # before_action :authorize, only: [:edit, :update, :destroy]
+  before_action :find_post, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:edit, :update, :destroy]
   
 
   def index
@@ -52,9 +52,9 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :description, :public, :image, :two_to_three, :four_to_five, :three_to_four, :one_to_one)
   end
 
-  # def authorize
-  #   if @post.user != current_user
-  #     redirect_to @post
-  #   end
-  # end
+  def authorize
+    if @post.user != current_user
+      redirect_to @post
+    end
+  end
 end
