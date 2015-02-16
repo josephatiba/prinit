@@ -4,7 +4,7 @@ class Post
 
   field :title, type: String
   field :description, type: String
-  field :public, type: Mongoid::Boolean
+  field :public, type: Mongoid::Boolean, default: :true
 
   mount_uploader :image, PictureUploader
 
