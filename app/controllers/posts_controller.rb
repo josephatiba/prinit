@@ -49,7 +49,7 @@ class PostsController < ApplicationController
     end
 
   def post_params
-    params.require(:post).permit(:title, :description, :public, :image, :two_to_three, :four_to_five, :three_to_four, :one_to_one)
+    params.require(:post).permit(:title, :description, :public, :image, :two_to_three, :four_to_five, :three_to_four, :one_to_one, :canvas)
   end
 
   def authorize
