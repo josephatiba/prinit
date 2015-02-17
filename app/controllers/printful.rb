@@ -7,4 +7,17 @@ class Printful
     @results = JSON.parse(printful.body)
   end
 
+  def model_name()
+    list['result']['product']['model']
+  end
+
+  def options()
+    list['result']['variants']
+  end
+
+  def option_name()
+   options.map{ |x| x['name'] }
+  end
+
+
 end

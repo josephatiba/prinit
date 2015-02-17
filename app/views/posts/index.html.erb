@@ -1,5 +1,9 @@
 <h1>Discover + Print</h1>
 
+ <% @printful.option_name.each do |canv_size| %>
+      <p><%= canv_size %></p>
+    <% end %>
+
 <h2><%= link_to('Upload new images', new_post_path) %></h2>
 
   <div> 
@@ -14,9 +18,11 @@
       <% end %> 
     <% end %>  
 
-    <% @printful.list.each do |data| %>
-      <p><%= data %></p>
-    <% end %>
+    
+    <h3><%= @printful.model_name %> Size options</h3>
+    
+   
+   
     
    
 </div>
