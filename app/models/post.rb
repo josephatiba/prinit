@@ -13,6 +13,5 @@ class Post
   end
 
   belongs_to :user
-  has_many :canvases
 
 end

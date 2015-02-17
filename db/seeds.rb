@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 images = Image.create([
-  { url: 'http://whatydooooo.com', name: 'Testing the prinit', private: true }
+  { url: 'http://whatydooooo.com', name: 'Testing the prinit', public: true }
   
   ])
+

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   resources :posts
 
+
    devise_scope :user do
     get '/users/auth/:provider/upgrade' => 'omniauth_callbacks#upgrade', as: :user_omniauth_upgrade
     get '/users/auth/:provider/setup', :to => 'omniauth_callbacks#setup'

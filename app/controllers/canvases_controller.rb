@@ -1,2 +1,0 @@
-class CanvasesController < ApplicationController
-end

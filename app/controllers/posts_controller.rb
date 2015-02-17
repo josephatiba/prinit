@@ -1,11 +1,11 @@
+require_relative 'printful'
 
 class PostsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
-  before_action :authorize, only: [:edit, :update, :destroy]
   
 
   def index
     @posts = Post.all.order(created_at: :desc)
+    @printful = Printful.new
   end
 
   def show
@@ -49,7 +49,7 @@ class PostsController < ApplicationController
     end
 
   def post_params
-    params.require(:post).permit(:title, :description, :public, :image, :two_to_three, :four_to_five, :three_to_four, :one_to_one, :canvas)
+    params.require(:post).permit(:title, :description, :public, :image, :two_to_three, :four_to_five, :three_to_four, :one_to_one)
   end
 
   def authorize

@@ -1,4 +1,4 @@
-class Canvas
+class Item
   include Mongoid::Document
 
   field :variant_id, type: Integer
@@ -9,14 +9,5 @@ class Canvas
   field :name, type: String
   field :size, type: String
 
-  belongs_to :post
-
-  def product_id
-    3
-  end
-
-  def variant_id
-    
-  end
-
+  embedded_in :order
 end
