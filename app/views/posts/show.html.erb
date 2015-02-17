@@ -8,14 +8,26 @@
   </div>
 
 
-
   <div class="row">
     
     <div>
-      <%= image_tag @post.image.url(:post_pic), class: "center-block" %>
+     
+     <img class="center-block" src="<%= @post.image.url(:post_pic) %>">
+   
     </div>
 
-    <button type="button" class="btn btn-info btn-lg center-block"><%= link_to('I want this!', post_canvases_path(@post)) %></button>
+    <button type="button" class="btn btn-info btn-lg center-block">I want this!</button>
+
+      <div class="row size-buttons-div center-block">
+        
+          <h4><%= @printful.model_name %> Size options</h4>
+
+          <% @printful.option_size.each do |canv_size| %>
+            <button type="button" class="btn btn-info btn-lg size-button"><%= canv_size %></button>
+          <% end %>
+
+        
+      </div>
 
     <% if current_user == @post.user %>
     <p><%= link_to('Edit Image', edit_post_path) %></p>

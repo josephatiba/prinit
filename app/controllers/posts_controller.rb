@@ -10,6 +10,7 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @printful = Printful.new
   end
 
   def new

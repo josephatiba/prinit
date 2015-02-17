@@ -17,18 +17,18 @@
     
     var Image = $resource("http://localhost:3000/api/images/:id", {id: "@_id"});
 
-    var User = $resource("http://localhost:3000/users/:id", {id: "@_id"});
+    var Printful = $resource("https://api.theprintful.com/products/3");
 
-    self.imageList = getImages();
+    self.canvasList = getCanvSizes();
 
     // self.addAlbum = addAlbum;
     // self.deleteAlbum = deleteAlbum;
   
 
     // INDEX - view all images
-    function getImages(){
+    function getCanvSizes(){
 
-      return Image.query();
+      return Printful.query();
    
     }            
 

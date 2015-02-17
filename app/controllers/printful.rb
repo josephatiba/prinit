@@ -1,6 +1,5 @@
 class Printful
 
-  API_HOST = 'api.theprintful.com'
 
   def list()
     printful = HTTParty.get("https://api.theprintful.com/products/3")
@@ -15,8 +14,8 @@ class Printful
     list['result']['variants']
   end
 
-  def option_name()
-   options.map{ |x| x['name'] }
+  def option_size()
+   options.map{ |x| x['size'] }
   end
 
 
