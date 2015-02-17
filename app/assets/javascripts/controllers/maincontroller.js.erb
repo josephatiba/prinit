@@ -19,18 +19,17 @@
 
     var Printful = $resource("https://api.theprintful.com/products/3");
 
-    self.canvasList = getCanvSizes();
+
+    self.picDisplay = ':post_pic';
 
     // self.addAlbum = addAlbum;
     // self.deleteAlbum = deleteAlbum;
-  
 
-    // INDEX - view all images
-    function getCanvSizes(){
-
-      return Printful.query();
-   
-    }            
+    
+    self.showImage = function(){
+      console.log('hi');
+    }
+            
 
 
   }
