@@ -33,5 +33,10 @@ class Identity
     identity
   end
 
+  def self.serialize_from_session(key, salt)
+    record = to_adapter.get(key[0]["$oid"])
+    record if record && record.authenticatable_salt == salt
+  end
+
 
 end

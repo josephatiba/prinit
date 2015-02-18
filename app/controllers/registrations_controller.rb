@@ -14,4 +14,9 @@ class RegistrationsController < Devise::RegistrationsController
       resource.update_with_password(params)
     end
   end
+
+  def self.serialize_from_session(key, salt)
+    record = to_adapter.get(key[0]["$oid"])
+    record if record && record.authenticatable_salt == salt
+  end
 end
