@@ -1,24 +1,21 @@
 Rails.application.routes.draw do
 
 
-  get '/home' => 'home#index'
+  
 
-  root 'home#index'
+  
 
-  resources :posts
-
-
-   devise_scope :user do
-    get '/users/auth/:provider/upgrade' => 'omniauth_callbacks#upgrade', as: :user_omniauth_upgrade
-    get '/users/auth/:provider/setup', :to => 'omniauth_callbacks#setup'
-  end
 
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations' }
-
+  resources :posts
 
   namespace :api, defaults: { format: "json" } do
     resources :images, only: :index
   end
+
+  get '/home' => 'home#index'
+
+  root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

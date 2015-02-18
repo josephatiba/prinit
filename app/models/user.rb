@@ -28,7 +28,7 @@ class User
 
   # omniauthable
   field :provider, type: String
-  field :uid, type: Integer
+  field :uid, type: String
 
 
 
