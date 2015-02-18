@@ -11,25 +11,45 @@
 
   function MainController($resource){
 
-    var self = this;
+        var self = this;
 
-    self.test = "prinit ok im in it!";
-    
-    var Image = $resource("http://localhost:3000/api/images/:id", {id: "@_id"});
+        self.test = "prinit ok im in it!";
+        
+        var Image = $resource("http://localhost:3000/api/images/:id", {id: "@_id"});
 
-    var Printful = $resource("https://api.theprintful.com/products/3");
+        // self.addAlbum = addAlbum;
+        // self.deleteAlbum = deleteAlbum;
 
+        var buttons = document.getElementsByTagName("button");
 
-    self.picDisplay = ':post_pic';
+        var canv_pics = document.getElementsByClassName("version");
 
-    // self.addAlbum = addAlbum;
-    // self.deleteAlbum = deleteAlbum;
+        self.display = false;
 
-    
-    self.showImage = function(){
-      console.log('hi');
-    }
-            
+        
+
+        self.showImage1 = function(){
+          console.log("12×12");
+          self.display = true;
+        }
+
+       self.showImage2 = function(){
+            console.log("12×16");
+        }
+
+        self.showImage3 = function(){
+          console.log("16×16");
+        }
+
+        self.showImage4 = function(){
+          console.log("16×20");
+        }
+
+        self.showImage5 = function(){
+          console.log("16×16");
+        }
+
+                 
 
 
   }
