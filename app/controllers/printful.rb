@@ -18,5 +18,9 @@ class Printful
    options.map{ |x| x['size'] }
   end
 
+  def option_price()
+    options.map { |p| p['price']  }
+  end
+
 
 end
