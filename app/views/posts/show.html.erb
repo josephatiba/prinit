@@ -16,11 +16,11 @@
 
 
      
-     <img class="center-block version default" ng-hide="main.display" src="<%= @post.image.url(:post_pic) %>">
-     <img class="center-block version 1" ng-hide="true" src="<%= @post.image.url(:two_to_three) %>">
-     <img class="center-block version 2" ng-hide="true" src="<%= @post.image.url(:three_to_four) %>">
-     <img class="center-block version 3" ng-hide="true" src="<%= @post.image.url(:four_to_five) %>">
-     <img class="center-block version 4" ng-hide="true" src="<%= @post.image.url(:one_to_one) %>">
+     <img class="center-block version default" ng-hide="main.display_default" src="<%= @post.image.url(:post_pic) %>">
+     <img class="center-block version 1" ng-hide="main.display_one_to_one" src="<%= @post.image.url(:one_to_one) %>">
+     <img class="center-block version 2" ng-hide="main.display_three_to_four" src="<%= @post.image.url(:three_to_four) %>">
+     <img class="center-block version 3" ng-hide="main.display_four_to_five" src="<%= @post.image.url(:four_to_five) %>">
+     <img class="center-block version 4" ng-hide="main.display_two_to_three" src="<%= @post.image.url(:two_to_three) %>">
 
 
   
@@ -29,16 +29,30 @@
 
     <button type="button" class="btn btn-info btn-lg center-block">I want this!</button>
 
+
+
       <div class="row size-buttons-div center-block" ng-model="clicked">
         
           <h4><%= @printful.model_name %> Size options</h4>
 
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.showImage1()"><%= @printful.option_size[0] %></button>
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.showImage2()"><%= @printful.option_size[1] %></button>
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.showImage3()"><%= @printful.option_size[2] %></button>
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.showImage4()"><%= @printful.option_size[3] %></button>
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.showImage5()"><%= @printful.option_size[4] %></button>
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.showImage6()"><%= @printful.option_size[5] %></button>
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_one_to_one()"><%= @printful.option_size[0] %></button>
+
+
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_three_to_four()"><%= @printful.option_size[1] %></button>
+
+
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_one_to_one()"><%= @printful.option_size[2] %></button>
+
+
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_four_to_five()"><%= @printful.option_size[3] %></button>
+
+
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_three_to_four()"><%= @printful.option_size[4] %></button>
+
+
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three()"><%= @printful.option_size[5] %></button>
+
+
 
           
 

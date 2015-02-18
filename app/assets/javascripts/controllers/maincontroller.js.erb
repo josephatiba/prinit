@@ -24,29 +24,50 @@
 
         var canv_pics = document.getElementsByClassName("version");
 
-        self.display = false;
+        self.display_default = false;
+        self.display_one_to_one = true;
+        self.display_three_to_four = true;
+        self.display_four_to_five = true;
+        self.display_two_to_three = true;
+
 
         
 
-        self.showImage1 = function(){
+        self.show_one_to_one = function(){
           console.log("12×12");
-          self.display = true;
+          self.display_default = true;
+          self.display_one_to_one = false;
+          self.display_three_to_four = true;
+          self.display_four_to_five = true;
+          self.display_two_to_three = true;
         }
 
-       self.showImage2 = function(){
-            console.log("12×16");
+       self.show_three_to_four = function(){
+          console.log("12×16");
+          self.display_default = true;
+          self.display_one_to_one = true;
+          self.display_three_to_four = false;
+          self.display_four_to_five = true;
+          self.display_two_to_three = true;
         }
 
-        self.showImage3 = function(){
-          console.log("16×16");
-        }
 
-        self.showImage4 = function(){
+        self.show_four_to_five = function(){
           console.log("16×20");
+          self.display_default = true;
+          self.display_one_to_one = true;
+          self.display_three_to_four = true;
+          self.display_four_to_five = false;
+          self.display_two_to_three = true;
         }
 
-        self.showImage5 = function(){
-          console.log("16×16");
+        self.show_two_to_three = function(){
+          console.log("24×36");
+          self.display_default = true;
+          self.display_one_to_one = true;
+          self.display_three_to_four = true;
+          self.display_four_to_five = true;
+          self.display_two_to_three = false;
         }
 
                  
