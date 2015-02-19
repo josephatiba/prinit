@@ -19,7 +19,7 @@ class Printful
   end
 
   def option_price()
-    options.map { |p| p['price']  }
+    options.map { |p| p['price'] }
   end
 
 

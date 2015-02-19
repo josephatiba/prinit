@@ -21,6 +21,7 @@
 // Distance
 $pushed: 90%;
 $header-height: 60px;
+$max-width: 100%;
 
 
 
@@ -31,7 +32,7 @@ $header-height: 60px;
 
 .max-width
 {
-  width: 100%;
+  width: $max-width;
 }
 
 .top-layer
@@ -100,6 +101,7 @@ img {
 
 // individual post style
 
+
 .size-buttons-div 
 {
   width: 550px;
@@ -113,6 +115,16 @@ img {
 .canvas-price 
 {
   text-align: center;
+}
+
+.addToCartFormDiv {
+  text-align: center;
+  width: auto;
+}
+
+.form-group 
+{
+  margin: 0 auto;
 }
 
 
