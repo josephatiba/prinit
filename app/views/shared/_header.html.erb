@@ -15,8 +15,9 @@
             <li><a href="#">Discover</a></li>
           </ul>
           
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">  
             <% if user_signed_in? %>
+              <li class="cart-text"><%= render 'layouts/cart_text' %></li>
               <li><a href="#">Signed in as <%= current_user.email %></a></li>
               <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li> 
             <% else %>

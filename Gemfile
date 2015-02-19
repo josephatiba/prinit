@@ -47,8 +47,6 @@ gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'thin', group: :production
 
-gem 'therubyracer'
-
 gem 'carrierwave'
 gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 

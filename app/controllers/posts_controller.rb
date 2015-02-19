@@ -5,12 +5,12 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
-    @printful = Printful.new
   end
 
   def show
     @post = Post.find(params[:id])
     @printful = Printful.new
+    @order_item = current_order.order_items.new
   end
 
   def new
@@ -31,7 +31,8 @@ class PostsController < ApplicationController
   end
 
   def update
-    if @post.update(post_params)
+    @post = Post.find(params[:id])
+    if @post.update_attributes(post_params)
       redirect_to @post
     else
       render 'edit'
@@ -50,7 +51,7 @@ class PostsController < ApplicationController
     end
 
   def post_params
-    params.require(:post).permit(:title, :description, :public, :image, :two_to_three, :four_to_five, :three_to_four, :one_to_one)
+    params.require(:post).permit(:title, :description, :price, :public, :image, :two_to_three, :four_to_five, :three_to_four, :one_to_one)
   end
 
   def authorize

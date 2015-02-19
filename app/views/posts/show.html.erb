@@ -128,9 +128,10 @@
 
 
         </form>
-
         
       </div>
+
+      <%= render "post_row", post: @post, order_item: @order_item %>
 
     <% if current_user == @post.user %>
     <p><%= link_to('Edit Image', edit_post_path) %></p>

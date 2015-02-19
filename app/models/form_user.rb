@@ -1,4 +1,5 @@
 class FormUser < User
+  include Mongoid::Document
   attr_accessor :current_password
 
   validates_presence_of   :email, if: :email_required?

@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
-
+ resources :posts
   
-
+ resource :cart, only: [:show]
+ resources :order_items, only: [:create, :update, :destroy]
   
-
 
   devise_for :users, class_name: 'FormUser', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations' }
-  resources :posts
+  
 
   namespace :api, defaults: { format: "json" } do
     resources :images, only: :index
