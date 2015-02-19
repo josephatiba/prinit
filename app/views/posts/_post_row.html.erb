@@ -10,6 +10,8 @@
       <h4 class="text-right">Unit Price: <span style="color: green"><%= number_to_currency @post.price %></span></h4>
         <div class="input-group">
           <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+            <%= f.hidden_field :variant_id, :value => "{{ main.getVariantId }}" %>
+            <%= f.hidden_field :file_url, :value => '{{ main.image_url }}' %>
           <div class="input-group-btn">
             <%= f.hidden_field :post_id, value: @post.id %>
             <%= f.submit "Add to Cart", class: "btn btn-primary" %>
