@@ -22,9 +22,9 @@
 
         var buttons = document.getElementsByTagName("button");
 
-        // var canv_pics = document.getElementsByClassName("version");
+        var orderFile = document.getElementsByClassName("version");
 
-        // var canv_price = document.getElementsByClassName("canvas-price");
+
 
         self.display_default = false;
         self.display_one_to_one = true;
@@ -42,6 +42,9 @@
 
         self.getVariantId = '';
 
+        // self.getOrderFile = function(){
+        //   console.log('order file working')
+        // }
 
     // Dynamically displays prices
         
@@ -109,8 +112,9 @@
       // Dynamically displays images
         
 
-        self.show_one_to_one = function(){
+        self.show_one_to_one = function(url){
           console.log("12×12");
+          self.image_url = url;
           self.display_default = true;
           self.display_one_to_one = false;
           self.display_three_to_four = true;
@@ -118,8 +122,9 @@
           self.display_two_to_three = true;
         }
 
-       self.show_three_to_four = function(){
+       self.show_three_to_four = function(url){
           console.log("12×16");
+          self.image_url = url;
           self.display_default = true;
           self.display_one_to_one = true;
           self.display_three_to_four = false;
@@ -128,8 +133,9 @@
         }
 
 
-        self.show_four_to_five = function(){
+        self.show_four_to_five = function(url){
           console.log("16×20");
+          self.image_url = url;
           self.display_default = true;
           self.display_one_to_one = true;
           self.display_three_to_four = true;
@@ -137,8 +143,9 @@
           self.display_two_to_three = true;
         }
 
-        self.show_two_to_three = function(){
+        self.show_two_to_three = function(url){
           console.log("24×36");
+          self.image_url = url;
           self.display_default = true;
           self.display_one_to_one = true;
           self.display_three_to_four = true;

@@ -13,6 +13,8 @@
     <div class="canvas-div">
 
       <h2>{{main.test}}</h2>
+
+  
       
 
 
@@ -43,22 +45,23 @@
         
           <h4><%= @printful.model_name %> Size options</h4>
 
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_one_to_one(); main.show_twelve_by_twelve_price()"><%= @printful.option_size[0] %></button>
+<!-- 12 X 12 -->
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_one_to_one('<%= @post.image.url(:one_to_one) %>'); main.show_twelve_by_twelve_price()"><%= @printful.option_size[0] %></button>
+
+<!-- 12 X 16 -->
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_three_to_four('<%= @post.image.url(:three_to_four) %>'); main.show_twelve_by_sixteen_price()"><%= @printful.option_size[1] %></button>
+
+<!-- 16 X 16 -->
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_one_to_one('<%= @post.image.url(:one_to_one) %>'); main.show_sixteen_by_sixteen_price()"><%= @printful.option_size[2] %></button>
 
 
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_three_to_four(); main.show_twelve_by_sixteen_price()"><%= @printful.option_size[1] %></button>
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_four_to_five('<%= @post.image.url(:four_to_five) %>'); main.show_sixteen_by_twenty_price()"><%= @printful.option_size[3] %></button>
 
 
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_one_to_one(); main.show_sixteen_by_sixteen_price()"><%= @printful.option_size[2] %></button>
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_three_to_four('<%= @post.image.url(:three_to_four) %>'); main.show_eighteen_by_twentyfour_price()"><%= @printful.option_size[4] %></button>
 
 
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_four_to_five(); main.show_sixteen_by_twenty_price()"><%= @printful.option_size[3] %></button>
-
-
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_three_to_four(); main.show_eighteen_by_twentyfour_price()"><%= @printful.option_size[4] %></button>
-
-
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three(); main.show_twentyfour_by_thirtysix_price()"><%= @printful.option_size[5] %></button>
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three('<%= @post.image.url(:two_to_three) %>'); main.show_twentyfour_by_thirtysix_price()"><%= @printful.option_size[5] %></button>
         
       </div>
 
@@ -80,7 +83,7 @@
           <div class="form-group">
             <label for="url" class="col-sm-2 control-label">File Url</label>
             <div class="col-sm-1">
-              <input type="text" class="form-control center-block" id="url" placeholder="<%= @printful.option_size[5] %>" readonly>
+              <input type="text" class="form-control center-block" id="url" placeholder="{{ main.image_url }}" readonly>
             </div>
           </div>
           <div class="form-group">
