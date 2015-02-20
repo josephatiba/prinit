@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def current_order
     if !session[:order_id].nil?
-      @current_order ||= Order.find(session[:order_id]["$oid"])
+      @current_order ||= Order.where(session[:order_id]["$oid"])
     end
   end
 

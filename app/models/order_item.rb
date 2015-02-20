@@ -11,9 +11,7 @@ class OrderItem
   
 
 
-  validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
-  validate :post_present
-  validate :order_present
+
 
   def unit_price
     if persisted?

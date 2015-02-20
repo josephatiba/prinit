@@ -1,5 +1,6 @@
 require_relative 'printful'
 
+
 class PostsController < ApplicationController
   
 
@@ -10,7 +11,7 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
     @printful = Printful.new
-    @order_item = current_order.order_items.new
+    # @order_item = current_order.order_items.new
   end
 
   def new
