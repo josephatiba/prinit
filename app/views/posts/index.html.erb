@@ -1,5 +1,15 @@
 <h1>Discover + Print</h1>
 
+<h3 class="text-center">posts for Sale</h3>
+
+<div class="row">
+  <div class="col-xs-6 col-xs-offset-3">
+    <% @posts.each do |post| %>
+      <%= render "post_row", post: post, order_item: @order_item %>
+    <% end %>
+  </div>
+</div>
+
  
 
 <h2><%= link_to('Upload new images', new_post_path) %></h2>
@@ -7,11 +17,11 @@
   <div> 
 
     <!-- user posts -->
-    <% @posts.each do |post| %>
-    <% if post.public == true %>
+    <% @posts.each do |postz| %>
+    <% if postz.public == true %>
           <div>
-            <%= link_to image_tag(post.image.url(:tile)), post %>
-            <p class="post-title"><%= link_to post.title, post, class: "user-index-post-title" %></p>
+            <%= link_to image_tag(postz.image.url(:tile)), postz %>
+            <p class="post-title"><%= link_to postz.title, postz, class: "user-index-post-title" %></p>
           </div>
       <% end %> 
     <% end %>  

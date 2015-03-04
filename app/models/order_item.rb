@@ -1,12 +1,20 @@
 class OrderItem
   include Mongoid::Document
+  belongs_to :post
+  belongs_to :order
+
+  # validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  # validate :product_present
+  # validate :order_present
+
   field :unit_price, type: Float
   field :quantity, type: Integer
   field :shipping_cost, type: Float
   # field :seller, type: String
   field :total_price, type: Float
-  belongs_to :post
-  belongs_to :order
+  field :file_url, type: String
+  field :variant_id, type: Integer
+  
   before_save :finalize
   
 

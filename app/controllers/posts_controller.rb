@@ -6,12 +6,14 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
+    @post = Post.find(find_post)
+    @order_item = current_order.order_items.new
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.find(find_post)
     @printful = Printful.new
-    # @order_item = current_order.order_items.new
+    @order_item = current_order.order_items.new
   end
 
   def new
@@ -28,11 +30,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(params[:id])
+    @post = Post.find(find_post)
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = Post.find(find_post)
     if @post.update_attributes(post_params)
       redirect_to @post
     else
@@ -48,11 +50,11 @@ class PostsController < ApplicationController
   private
 
   def find_post
-    @post = Post.find(params[:id])
-    end
+    @post = Post.where(params[:id])
+  end
 
   def post_params
-    params.require(:post).permit(:title, :description, :price, :public, :image, :two_to_three, :four_to_five, :three_to_four, :one_to_one)
+    params.require(:post).permit(:title, :description, :price, :public, :active, :image, :two_to_three, :four_to_five, :three_to_four, :one_to_one)
   end
 
   def authorize

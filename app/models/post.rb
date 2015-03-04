@@ -7,7 +7,10 @@ class Post
   field :price, type: Float
   field :description, type: String
   field :public, type: Mongoid::Boolean, default: :true
- # the field is public instead of active
+  field :active, type: Mongoid::Boolean, default: :true
+
+  # default_scope { where(active: true) }
+ 
 
   mount_uploader :image, PictureUploader
 

@@ -7,7 +7,9 @@ class ApplicationController < ActionController::Base
 
   def current_order
     if !session[:order_id].nil?
-      @current_order ||= Order.where(session[:order_id]["$oid"])
+      Order.find(session[:order_id])
+    else
+      Order.new
     end
   end
 
@@ -16,11 +18,9 @@ class ApplicationController < ActionController::Base
   helper_method :logged_in?
 
   def current_user
-
     if(session[:user_id])
       @current_user ||= User.find(session[:user_id]["$oid"])  
     end
-
   end
 
   def logged_in?
