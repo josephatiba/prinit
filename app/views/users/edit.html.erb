@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="row">
+   <div class="col-xs-6 col-xs-offset-3">
+        <h3>Edit User!</h3>
+
+        <%= @user.errors.full_messages %>
+
+        <%= form_for @user do |f| %>
+          
+
+          <div class="form-group">
+              <p>put user profile pic here when it's time</p>
+          </div>
+
+          <div class="form-group">
+             <%= f.label :first_name %>
+             <%= f.text_field :first_name, value: @user.first_name, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+             <%= f.label :last_name %>
+             <%= f.text_field :last_name, value: @user.last_name, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+             <%= f.label :category %>
+             <%= f.text_field :category, value: @user.category, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+             <%= f.label :bio %>
+             <%= f.text_field :bio, value: @user.bio, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+             <%= f.label :contact_info %>
+             <%= f.text_field :contact_info, value: @user.contact_info, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+             <%= f.label :email %>
+             <%= f.text_field :email, value: @user.email, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password, "Enter password before you save changes" %>
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+
+          <div class="form-group">
+            <%= f.label :password_confirmation, "Re-enter password before you save changes" %>
+            <%= f.password_field :password_confirmation, class: "form-control" %>
+          </div>
+
+              
+
+          <div>
+             <%= f.submit "Save Changes" %>
+          </div>
+
+        <% end %>
+    </div>
+  </div>
+</div>

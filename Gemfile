@@ -20,7 +20,6 @@ gem 'coffee-rails', '~> 4.0.0'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-gem 'devise'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
@@ -37,10 +36,7 @@ gem 'bower-rails'
 gem 'bootstrap-sass', '~> 3.3.3'
 
 gem 'bson_ext'
-gem 'omniauth'
-gem 'omniauth-twitter'
-gem 'omniauth-facebook'
-gem 'omniauth-instagram'
+
 gem 'twitter'
 gem 'instagram'
 gem 'figaro'

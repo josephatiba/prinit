@@ -2,75 +2,43 @@ class User
   include Mongoid::Document
   has_many :posts
 
-  has_many :identities, :dependent => :destroy
 
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, , :validatable, :timeoutable and :omniauthable
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :omniauthable
+  validates :username, uniqueness: { case_sensitive: false }
 
-  ## Database authenticatable
-  field :email,              type: String, default: ""
-  field :encrypted_password, type: String, default: ""
+  validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 
-  ## Recoverable
-  field :reset_password_token,   type: String
-  field :reset_password_sent_at, type: Time
+  validates :password, presence: true, length: { in: 2..20 }, confirmation: true, on: [:create, :update] # :if => :password, :unless => :password_digest.present?
 
-  ## Rememberable
-  field :remember_created_at, type: Time
+  attr_reader :password, :password_confirmation
 
-  ## Trackable
-  field :sign_in_count,      type: Integer, default: 0
-  field :current_sign_in_at, type: Time
-  field :last_sign_in_at,    type: Time
-  field :current_sign_in_ip, type: String
-  field :last_sign_in_ip,    type: String
-
-  # omniauthable
-  field :provider, type: String
-  field :uid, type: String
+  field :username, type: String
+  field :email, type: String  
+  field :user_id, type: String  
+  field :password_digest, type: String
+  field :first_name, type: String
+  field :last_name, type: String
+  field :category, type: String
+  field :bio, type: String
+  field :contact_info, type: String
 
 
-
-  ## Confirmable
-  # field :confirmation_token,   type: String
-  # field :confirmed_at,         type: Time
-  # field :confirmation_sent_at, type: Time
-  # field :unconfirmed_email,    type: String # Only if using reconfirmable
-
-  ## Lockable
-  # field :failed_attempts, type: Integer, default: 0 # Only if lock strategy is :failed_attempts
-  # field :unlock_token,    type: String # Only if unlock strategy is :email or :both
-  # field :locked_at,       type: Time
-
-  def self.serialize_from_session(key, salt)
-    record = to_adapter.get(key[0]["$oid"])
-    record if record && record.authenticatable_salt == salt
+  def password=(unencrypted_password)
+    unless unencrypted_password.empty?
+      @password = unencrypted_password
+      self.password_digest = BCrypt::Password.create(unencrypted_password)
+    end
   end
 
- 
+  # a new method to authenticate a user
 
-  def twitter
-    identities.where( :provider => "twitter" ).first
+  def authenticate(unencrypted_password)
+    if BCrypt::Password.new(self.password_digest) == unencrypted_password
+      return self
+    else
+      return false
+    end
   end
 
-  def twitter_client
-    @twitter_client ||= Twitter.client( access_token: twitter.accesstoken )
-  end
 
-  def facebook
-    identities.where( :provider => "facebook" ).first
-  end
 
-  def facebook_client
-    @facebook_client ||= Facebook.client( access_token: facebook.accesstoken )
-  end
-
-  def instagram
-    identities.where( :provider => "instagram" ).first
-  end
-
-  def instagram_client
-    @instagram_client ||= Instagram.client( access_token: instagram.accesstoken )
-  end
 end

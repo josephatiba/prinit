@@ -1,0 +1,84 @@
+
+<% if current_user == @user %>
+  <%= link_to "Edit #{@user.first_name}'s Information", edit_user_path(@user) %>
+    <%= link_to "Cancel #{@user.first_name}'s account?", :user, method: :delete, data: {confirm: "Are you sure you want to remove your account, #{@user.first_name}? You are Magnificent and we'd like you to stay!"} %>
+<% end %>
+
+<div class="container text-center center-block">
+  <div class="row">
+   
+              <h1> <%= @user.first_name %> </h1>
+
+  
+
+              <b > <%= @user.category %> </b>
+              <br>
+              <p class="text-left"> <%= @user.bio %> </p> 
+              <br>
+              <p> <%= @user.contact_info %> </p>
+            
+        </div>
+
+        <br>
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+           
+          </ol>
+
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" role="listbox">
+           <% @user.posts.each do |post| %>
+            <div class="item">
+                <%= image_tag post.image.url(:post_pic), class: "center-block" %>
+              <div class="carousel-caption">
+                <%=  post.title %>
+              </div>
+            </div>
+            <% end %>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <!-- <span class="sr-only">Previous</span> -->
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <!-- <span class="sr-only">Next</span> -->
+          </a>
+        </div>
+
+        <br>
+
+        <div class="container">
+          <div id="posts" class="center-block"> 
+            <h6> <%= @user.first_name %>'s Porftolio </h6>
+
+    <!-- user posts -->
+    <% @user.posts.each do |post| %>
+      <div class="box panel panel-default">
+        <%= link_to image_tag(post.image.url(:tile)), post %>
+        <p><%= link_to post.title, post %></p>
+        </div>  
+    <% end %>   
+      
+        </div>
+
+      </div>
+   
+
+
+
+
+ 
+
+  
+
+  
+
