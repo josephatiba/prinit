@@ -3,7 +3,7 @@ class OrderItem
   belongs_to :post
   belongs_to :order
 
-  # validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
+  validates :quantity, presence: true, numericality: { only_integer: true, greater_than: 0 }
   # validate :product_present
   # validate :order_present
 
@@ -13,6 +13,7 @@ class OrderItem
   field :total_price, type: Float
   field :file_url, type: String
   field :variant_id, type: Integer
+  accepts_nested_attributes_for :post
   
   before_save :finalize
   
@@ -35,7 +36,7 @@ class OrderItem
     (unit_price * quantity) + (quantity * shipping_cost)
   end
 
-  def ship_cost
+  def shipping_cost
     self[:shipping_cost] = 40.13
   end
 
@@ -54,7 +55,7 @@ class OrderItem
 
   def finalize
     self[:unit_price] = unit_price
-    self[:shipping_cost] = ship_cost
+    self[:shipping_cost] = shipping_cost
     self[:total_price] = quantity * self[:unit_price]
     # self[:total_price] = self[:total_price] + (self[:shipping_cost] * quantity)
   end
