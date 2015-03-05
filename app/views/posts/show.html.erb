@@ -11,12 +11,18 @@
   <div class="row">
     
     <div class="canvas-div">
-     
-     <img class="center-block version" src="<%= @post.image.url(:two_to_three) %>">
-     
-     <img class="center-block version" src="<%= @post.image.url(:two_to_three_l) %>">
 
+
+     
+     <img class="center-block version" ng-show="main.display_two_to_three_l" src="<%= @post.image.url(:two_to_three) %>">
+     
+     <img class="center-block version" ng-show="main.display_two_to_three" src="<%= @post.image.url(:two_to_three_l) %>">
+
+   
     </div>
+
+  
+
 
 
       <div class="row size-buttons-div center-block" ng-model="clicked">
@@ -24,7 +30,7 @@
           <h4><%= @printful.model_name %> Layouts</h4>
 
 
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_show_two_to_three_l('<%= @post.image.url(:two_to_three_l) %>')">Landscape</button>
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three_l('<%= @post.image.url(:two_to_three_l) %>')">Landscape</button>
 
 
           <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three('<%= @post.image.url(:two_to_three) %>')">Portrait</button>
