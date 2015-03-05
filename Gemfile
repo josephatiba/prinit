@@ -37,6 +37,8 @@ gem 'bootstrap-sass', '~> 3.3.3'
 
 gem 'bson_ext'
 
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
 gem 'twitter'
 gem 'instagram'
 gem 'figaro'

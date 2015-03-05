@@ -1,0 +1,17 @@
+<div id="charges">
+  <%= form_tag charges_path(@order) do %>
+    
+    <article>
+      <label class="amount">
+        <span>Amount <%= number_to_currency((@order.total).to_f/100) %></span>
+      </label>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+            data-description="Prinit Canvas Purchases"
+            data-amount="<%= @order.total %>"></script>
+  <% end %>
+
+  <%= link_to "Return to Shopping", posts_path, class: "btn btn-info btn-register btn-sm all-items-btn" %>
+</div>

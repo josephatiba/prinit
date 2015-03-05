@@ -2,6 +2,8 @@ class User
   include Mongoid::Document
   has_many :posts
 
+  has_many :orders
+
 
   validates :username, uniqueness: { case_sensitive: false }
 
@@ -37,6 +39,10 @@ class User
     else
       return false
     end
+  end
+
+  def email
+    self[:email]
   end
 
 

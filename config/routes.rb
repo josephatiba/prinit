@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :users
+  resources :charges
 
   resource :cart, only: [:show]
   resources :order_items, only: [:create, :update, :destroy]
