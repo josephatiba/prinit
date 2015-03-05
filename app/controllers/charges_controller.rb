@@ -12,7 +12,7 @@ class ChargesController < ApplicationController
     # set order stauts to 2 (paid)
     @order.order_status_id = 2
     @order.save
-    session[:order_id] = nil
+    # 
 
   end
 
@@ -21,7 +21,7 @@ class ChargesController < ApplicationController
     
     @order = current_order
     @user = current_user
-    @amount = @order.total
+    @amount = @order.total.to_i
 
     customer = Stripe::Customer.create(
       :email => @user.email,
@@ -44,5 +44,5 @@ class ChargesController < ApplicationController
       flash[:error] = e.message
       redirect_to cart_path
     end
-
+    session[:order_id] = nil
 end
