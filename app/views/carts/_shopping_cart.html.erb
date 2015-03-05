@@ -12,6 +12,16 @@
     There are no items in your shopping cart.  Please <%= link_to "go back", posts_path %> and add some items to your cart.
   </p>
 <% else %>
+<form action="" method="POST">
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_gS9zVE2cdzG1YnHYMyiW1B4x"
+    data-amount="2000"
+    data-name="Demo Site"
+    data-description="2 widgets ($20.00)"
+    data-image="/128x128.png">
+  </script>
+</form>
   <% @order_items.each do |order_item| %>
     <%= render 'carts/cart_row', post: order_item.post, order_item: order_item, show_total: true %>
   <% end %>
