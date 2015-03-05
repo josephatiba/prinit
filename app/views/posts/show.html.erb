@@ -11,56 +11,23 @@
   <div class="row">
     
     <div class="canvas-div">
-
-  
-      
-
-
      
-     <img class="center-block version default" ng-hide="main.display_default" src="<%= @post.image.url(:post_pic) %>">
-     <img class="center-block version 1" ng-hide="main.display_one_to_one" src="<%= @post.image.url(:one_to_one) %>">
-     <img class="center-block version 2" ng-hide="main.display_three_to_four" src="<%= @post.image.url(:three_to_four) %>">
-     <img class="center-block version 3" ng-hide="main.display_four_to_five" src="<%= @post.image.url(:four_to_five) %>">
-     <img class="center-block version 4" ng-hide="main.display_two_to_three" src="<%= @post.image.url(:two_to_three) %>">
+     <img class="center-block version" src="<%= @post.image.url(:two_to_three) %>">
+     
+     <img class="center-block version" src="<%= @post.image.url(:two_to_three_l) %>">
 
-<!-- canvas prices -->
-     <div id="dollars">
-       <p class="canvas-price" ng-hide="main.twelve_by_twelve_price" ng-model="canvasPrice"><%= @printful.option_price[0] %></p>
-       <p class="canvas-price" ng-hide="main.twelve_by_sixteen_price"><%= @printful.option_price[1] %></p>
-       <p class="canvas-price" ng-hide="main.sixteen_by_sixteen_price"><%= @printful.option_price[2] %></p>
-       <p class="canvas-price" ng-hide="main.sixteen_by_twenty_price"><%= @printful.option_price[3] %></p>
-       <p class="canvas-price" ng-hide="main.eighteen_by_twentyfour_price"><%= @printful.option_price[4] %></p>
-       <p class="canvas-price" ng-hide="main.twentyfour_by_thirtysix_price"><%= @printful.option_price[5] %></p>
-     </div>
-      
-   
     </div>
-
-    <button type="button" class="btn btn-info btn-lg center-block" >Add to Cart!</button>
-
 
 
       <div class="row size-buttons-div center-block" ng-model="clicked">
         
-          <h4><%= @printful.model_name %> Size options</h4>
-
-<!-- 12 X 12 -->
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_one_to_one('<%= @post.image.url(:one_to_one) %>'); main.show_twelve_by_twelve_price(); main.getCanvasPrice()"><%= @printful.option_size[0] %></button>
-
-<!-- 12 X 16 -->
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_three_to_four('<%= @post.image.url(:three_to_four) %>'); main.show_twelve_by_sixteen_price(); main.getCanvasPrice()"><%= @printful.option_size[1] %></button>
-
-<!-- 16 X 16 -->
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_one_to_one('<%= @post.image.url(:one_to_one) %>'); main.show_sixteen_by_sixteen_price(); main.getCanvasPrice()"><%= @printful.option_size[2] %></button>
+          <h4><%= @printful.model_name %> Layouts</h4>
 
 
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_four_to_five('<%= @post.image.url(:four_to_five) %>'); main.show_sixteen_by_twenty_price(); main.getCanvasPrice()"><%= @printful.option_size[3] %></button>
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_show_two_to_three_l('<%= @post.image.url(:two_to_three_l) %>')">Landscape</button>
 
 
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_three_to_four('<%= @post.image.url(:three_to_four) %>'); main.show_eighteen_by_twentyfour_price(); main.getCanvasPrice()"><%= @printful.option_size[4] %></button>
-
-
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three('<%= @post.image.url(:two_to_three) %>'); main.show_twentyfour_by_thirtysix_price(); main.getCanvasPrice()"><%= @printful.option_size[5] %></button>
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three('<%= @post.image.url(:two_to_three) %>')">Portrait</button>
         
       </div>
 
@@ -70,66 +37,11 @@
        <%= render "post_row", post: @post, order_item: @order_item %>
 <!-- BR should be taken out when actually styling -->
             <!-- form -->
-      <div class="addToCartFormDiv">
-        <form class="form-horizontal">
-          <div class="form-group">
-            <label for="variantId" class="col-sm-2 control-label">Variant id:</label>
-            <div class="col-sm-1">
-              <input type="text" class="form-control center-block" id="variantId" placeholder="{{ main.getVariantId }} " readonly>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="url" class="col-sm-2 control-label">File Url</label>
-            <div class="col-sm-1">
-              <input type="text" class="form-control center-block" id="url" placeholder="<%= @printful.option_size[5] %>" readonly>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="center-block">
-            <label class="col-sm-2 control-label">Quantity:</label>
-            <div class="col-sm-1">
-              <select class="form-control">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  <option>6</option>
-                  <option>7</option>
-                  <option>8</option>
-                  <option>9</option>
-                  <option>10</option>
-                  <option>11</option>
-                  <option>12</option>
-                  <option>13</option>
-              </select>
-            </div>
-            </div>
-          </div>
- 
-           
-          <div class="form-group">
-            <div class="center-block">
-            <!-- cancel button -->
-              <button type="button" class="btn btn-danger">Cancel</button>            
-            
-          <!-- Continue shopping -->
-          
-              <button type="button" class="btn btn-info"><%= link_to('Discover More!', posts_path) %></button>
-           
+      
+      <div class="row">
+        <%= link_to 'Check Out', new_charge_path, class: 'btn btn-success' %>
 
-          <!-- Continue Checkout -->
-         
-              <button type="submit" class="btn btn-success">Check Out &#8680;</button>
-            </div>
-          </div>
-
-
-       </form>
-        
       </div>
-
-    
 
     <% if current_user == @post.user %>
     <p><%= link_to('Edit Image', edit_post_path) %></p>
@@ -142,15 +54,9 @@
 
   <div class="row">
 
-    <h3><%= @post.title %></h3>
     <p><%= @post.description %></p>
 
-
   </div>
 
-  <div class="row">
-
-    <h4></h4>
-  </div>
-
+ 
 </div>

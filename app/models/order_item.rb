@@ -10,7 +10,6 @@ class OrderItem
   field :unit_price, type: Float
   field :quantity, type: Integer
   field :shipping_cost, type: Float
-  # field :seller, type: String
   field :total_price, type: Float
   field :file_url, type: String
   field :variant_id, type: Integer
@@ -19,15 +18,18 @@ class OrderItem
   
 
 
-
-
   def unit_price
-    if persisted?
-      self[:unit_price] = post.price + 120.00
-    else
-      post.price
-    end
+    self[:unit_price] = 120.00
   end
+
+  #  def unit_price
+  #   self[:unit_price] = 111.00
+  #   if persisted?
+  #     self[:unit_price] = post.price + 111.00
+  #   else
+      
+  #   end
+  # end
 
   def total_price
     (unit_price * quantity) + (quantity * shipping_cost)

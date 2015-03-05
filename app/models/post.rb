@@ -9,6 +9,7 @@ class Post
   field :public, type: Mongoid::Boolean, default: :true
   field :active, type: Mongoid::Boolean, default: :true
 
+  belongs_to :user
   has_many :order_items
 
   # default_scope { where(active: true) }
@@ -20,6 +21,6 @@ class Post
     created_at.localtime.strftime("%-m/%-d/%Y | %l:%M %p")
   end
 
-  belongs_to :user
+  
 
 end

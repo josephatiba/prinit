@@ -15,165 +15,32 @@
 
         self.test = "prinit ok im in it!";
         
-        var Image = $resource("http://localhost:3000/api/images/:id", {id: "@_id"});
 
-        // self.addAlbum = addAlbum;
-        // self.deleteAlbum = deleteAlbum;
+        // self.display_two_to_three = false;
 
-        var buttons = document.getElementsByTagName("button");
-
-        var orderFile = document.getElementsByClassName("version");
-
-        var prices = document.getElementsByClassName("canvas-price");
-
-        var dollars = document.getElementById("dollars");
-
-
-        self.display_default = false;
-        self.display_one_to_one = true;
-        self.display_three_to_four = true;
-        self.display_four_to_five = true;
-        self.display_two_to_three = true;
-
-
-        self.twelve_by_twelve_price = true;
-        self.twelve_by_sixteen_price = true;
-        self.sixteen_by_sixteen_price = true;
-        self.sixteen_by_twenty_price = true;
-        self.eighteen_by_twentyfour_price = true;
-        self.twentyfour_by_thirtysix_price = true;
+        // self.display_two_to_three_l = true;
 
         self.getVariantId = '';
 
-        self.thePrice = 0;
-
-        // self.getOrderFile = function(){
-        //   console.log('order file working')
-        // }
-
-        self.getCanvasPrice = function(){
-          for(i = 0; i < prices.length; i++){
-            priceHelper = prices[i].className;
-            priceFilter = priceHelper.className !== 'ng=hide';
-            if(prices[i].className !== 'ng-hide'){
-              console.log(priceHelper);
-           }
-          }
-        }
-
-    // Dynamically displays prices
-        
-        self.show_twelve_by_twelve_price = function(){
-        self.twelve_by_twelve_price = false;
-        self.twelve_by_sixteen_price = true;
-        self.sixteen_by_sixteen_price = true;
-        self.sixteen_by_twenty_price = true;
-        self.eighteen_by_twentyfour_price = true;
-        self.twentyfour_by_thirtysix_price = true;
-        self.getVariantId = 823;
-        self.thePrice = 43.50;   
-        console.log(self.thePrice);     
-      }
-
-        self.show_twelve_by_sixteen_price = function(){
-        self.twelve_by_twelve_price = true;
-        self.twelve_by_sixteen_price = false;
-        self.sixteen_by_sixteen_price = true;
-        self.sixteen_by_twenty_price = true;
-        self.eighteen_by_twentyfour_price = true;
-        self.twentyfour_by_thirtysix_price = true;
-        self.getVariantId = 5;
-        self.thePrice = 45.00; 
-        }
-
-        self.show_sixteen_by_sixteen_price = function(){
-        self.twelve_by_twelve_price = true;
-        self.twelve_by_sixteen_price = true;
-        self.sixteen_by_sixteen_price = false;
-        self.sixteen_by_twenty_price = true;
-        self.eighteen_by_twentyfour_price = true;
-        self.twentyfour_by_thirtysix_price = true;
-        self.getVariantId = 824;
-        self.thePrice = 46.50; 
-        }
-
-        self.show_sixteen_by_twenty_price = function(){
-        self.twelve_by_twelve_price = true;
-        self.twelve_by_sixteen_price = true;
-        self.sixteen_by_sixteen_price = true;
-        self.sixteen_by_twenty_price = false;
-        self.eighteen_by_twentyfour_price = true;
-        self.twentyfour_by_thirtysix_price = true;
-        self.getVariantId = 6;
-        self.thePrice = 50.00; 
-        }
-
-        self.show_eighteen_by_twentyfour_price = function(){
-        self.twelve_by_twelve_price = true;
-        self.twelve_by_sixteen_price = true;
-        self.sixteen_by_sixteen_price = true;
-        self.sixteen_by_twenty_price = true;
-        self.eighteen_by_twentyfour_price = false;
-        self.twentyfour_by_thirtysix_price = true;
-        self.getVariantId = 7;
-        self.thePrice = 55.00;
-        }
-
-        self.show_twentyfour_by_thirtysix_price = function(){
-        self.twelve_by_twelve_price = true;
-        self.twelve_by_sixteen_price = true;
-        self.sixteen_by_sixteen_price = true;
-        self.sixteen_by_twenty_price = true;
-        self.eighteen_by_twentyfour_price = true;
-        self.twentyfour_by_thirtysix_price = false;
-        self.getVariantId = 825;
-        self.thePrice = 109.00;
-        }
 
 
       // Dynamically displays images
-        
 
-        self.show_one_to_one = function(url){
-          console.log("12×12");
-          self.image_url = url;
-          self.display_default = true;
-          self.display_one_to_one = false;
-          self.display_three_to_four = true;
-          self.display_four_to_five = true;
-          self.display_two_to_three = true;
-        }
+        // self.show_two_to_three = function(url){
+        //   console.log("24×36");
+        //   self.image_url = url;
+        //   self.display_two_to_three = false;
+        //   self.display_two_to_three_l = true;
+        //   self.getVariantId = 825;
+        // }
 
-       self.show_three_to_four = function(url){
-          console.log("12×16");
-          self.image_url = url;
-          self.display_default = true;
-          self.display_one_to_one = true;
-          self.display_three_to_four = false;
-          self.display_four_to_five = true;
-          self.display_two_to_three = true;
-        }
-
-
-        self.show_four_to_five = function(url){
-          console.log("16×20");
-          self.image_url = url;
-          self.display_default = true;
-          self.display_one_to_one = true;
-          self.display_three_to_four = true;
-          self.display_four_to_five = false;
-          self.display_two_to_three = true;
-        }
-
-        self.show_two_to_three = function(url){
-          console.log("24×36");
-          self.image_url = url;
-          self.display_default = true;
-          self.display_one_to_one = true;
-          self.display_three_to_four = true;
-          self.display_four_to_five = true;
-          self.display_two_to_three = false;
-        }
+        // self.show_two_to_three_l = function(url){
+        //   console.log("36×24");
+        //   self.image_url = url;
+        //   self.display_two_to_three = true;
+        //   self.display_two_to_three_l = false;
+        //   self.getVariantId = 825;
+        // }
 
                 
 
