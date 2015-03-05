@@ -23,7 +23,7 @@ class OrderItem
 
   def unit_price
     if persisted?
-      self[:unit_price]
+      self[:unit_price] = post.price + 120.00
     else
       post.price
     end

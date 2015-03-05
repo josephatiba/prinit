@@ -1,6 +1,7 @@
 class Printful
 
 
+
   def list()
     printful = HTTParty.get("https://api.theprintful.com/products/3")
     @results = JSON.parse(printful.body)

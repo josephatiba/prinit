@@ -24,6 +24,9 @@
 
         var orderFile = document.getElementsByClassName("version");
 
+        var prices = document.getElementsByClassName("canvas-price");
+
+        var dollars = document.getElementById("dollars");
 
 
         self.display_default = false;
@@ -42,9 +45,21 @@
 
         self.getVariantId = '';
 
+        self.thePrice = 0;
+
         // self.getOrderFile = function(){
         //   console.log('order file working')
         // }
+
+        self.getCanvasPrice = function(){
+          for(i = 0; i < prices.length; i++){
+            priceHelper = prices[i].className;
+            priceFilter = priceHelper.className !== 'ng=hide';
+            if(prices[i].className !== 'ng-hide'){
+              console.log(priceHelper);
+           }
+          }
+        }
 
     // Dynamically displays prices
         
@@ -56,7 +71,9 @@
         self.eighteen_by_twentyfour_price = true;
         self.twentyfour_by_thirtysix_price = true;
         self.getVariantId = 823;
-        }
+        self.thePrice = 43.50;   
+        console.log(self.thePrice);     
+      }
 
         self.show_twelve_by_sixteen_price = function(){
         self.twelve_by_twelve_price = true;
@@ -66,6 +83,7 @@
         self.eighteen_by_twentyfour_price = true;
         self.twentyfour_by_thirtysix_price = true;
         self.getVariantId = 5;
+        self.thePrice = 45.00; 
         }
 
         self.show_sixteen_by_sixteen_price = function(){
@@ -76,6 +94,7 @@
         self.eighteen_by_twentyfour_price = true;
         self.twentyfour_by_thirtysix_price = true;
         self.getVariantId = 824;
+        self.thePrice = 46.50; 
         }
 
         self.show_sixteen_by_twenty_price = function(){
@@ -86,6 +105,7 @@
         self.eighteen_by_twentyfour_price = true;
         self.twentyfour_by_thirtysix_price = true;
         self.getVariantId = 6;
+        self.thePrice = 50.00; 
         }
 
         self.show_eighteen_by_twentyfour_price = function(){
@@ -96,6 +116,7 @@
         self.eighteen_by_twentyfour_price = false;
         self.twentyfour_by_thirtysix_price = true;
         self.getVariantId = 7;
+        self.thePrice = 55.00;
         }
 
         self.show_twentyfour_by_thirtysix_price = function(){
@@ -106,6 +127,7 @@
         self.eighteen_by_twentyfour_price = true;
         self.twentyfour_by_thirtysix_price = false;
         self.getVariantId = 825;
+        self.thePrice = 109.00;
         }
 
 

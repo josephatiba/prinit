@@ -6,12 +6,11 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all.order(created_at: :desc)
-    @post = Post.find(find_post)
     @order_item = current_order.order_items.new
   end
 
   def show
-    @post = Post.find(find_post)
+    @post = Post.find(params[:id])
     @printful = Printful.new
     @order_item = current_order.order_items.new
   end
@@ -21,7 +20,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = current_user.posts.new(post_params)
+    @post = current_user.posts.new(params[:id])
     if @post.save
       redirect_to @post
     else
@@ -30,11 +29,11 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find(find_post)
+    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(find_post)
+    @post = Post.find(params[:id])
     if @post.update_attributes(post_params)
       redirect_to @post
     else
