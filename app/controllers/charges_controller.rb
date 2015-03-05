@@ -44,5 +44,5 @@ class ChargesController < ApplicationController
       flash[:error] = e.message
       redirect_to cart_path
     end
-    session[:order_id] = nil
+    
 end
