@@ -16,6 +16,7 @@
           
           <ul class="nav navbar-nav navbar-right">  
             <% if !logged_in? %>
+              <li><%= link_to('Your Account', user_path(current_user)) %></li>
               <li class="cart-text"><%= render 'layouts/cart_text' %></li>
               <!-- <li><a href="#">Signed in as <%= @current_user %></a></li> -->
               <li><%= link_to('Logout', logout_path, :method => :delete) %></li> 
