@@ -3,7 +3,7 @@
 <!-- post title -->
   <div class="row">
 
-    <h1><%= @post.title %> by <%= @post.user.username %></h1>
+    <h1><%= @post.title %> by <%= link_to(@post.user.username, user_path(@post.user_id)) %></h1>
 
   </div>
 
