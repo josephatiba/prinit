@@ -25,6 +25,8 @@ $max-width: 100%;
 
 
 
+
+
 .max-height
 {
   min-height: 100%;
@@ -41,51 +43,13 @@ $max-width: 100%;
 }
 
 
-// animations
-
-
-.push-menu
-{
-  @extend .max-height;
-  @extend .top-layer;
-  width: 0;
-  position: fixed;
-  top: 0;
-  right: 0;
-  background-color: #424242;
-  transition: width 0.5s ease;
-  button
-  {
-    width: 100%;
-    margin: 10px 0;
-    color: white;
-    background-color: #6E6E6E;
-    border: 0;
-    padding: 10px;
-    a
-    {
-      color: #fff;
-    }   
-  }
-}
-
-.pushed-menu
-{
-  width: $pushed;
-}
-
-.body-pushed
-{
-  left: -$pushed;
-}
-
 // HTML & Body
 
 body
 {
-  position: relative;
-  left: 0px;
-  transition: left .5s ease;
+ background: url('Blank-Canvas.jpg');
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 
@@ -127,10 +91,10 @@ img {
   margin: 0 auto;
 }
 
-// .jumbotron 
-// {
- 
-// }
+.jumbotron 
+{
+ background: none;
+}
 
 // .jumbotron-text
 // {
