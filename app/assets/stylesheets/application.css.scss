@@ -23,7 +23,17 @@ $pushed: 90%;
 $header-height: 60px;
 $max-width: 100%;
 
+.taterSalad 
+{
+  height: 700px;
+  color: blue;
+  background-color: yellow;
+}
 
+.indexcont
+{
+  border: 1px solid black;
+}
 
 
 
@@ -45,12 +55,16 @@ $max-width: 100%;
 
 // HTML & Body
 
-body
+#view-container
 {
- background: url('Blank-Canvas.jpg');
- background-repeat: no-repeat;
- background-size: cover;
+ padding: 0;
 }
+
+.notice, .alert 
+{
+  margin: 0;
+}
+
 
 
 
@@ -94,6 +108,35 @@ img {
 .jumbotron 
 {
  background: none;
+}
+
+.home-container 
+{
+ 
+ // -webkit-background-size: cover;
+ // -moz-background-size: cover;
+ // -o-background-size: cover;
+ // background-size: cover;
+ // margin: 20px 0 0 0;
+ // height: 700px;
+ position: fixed; 
+ top: 0; 
+ right: 0; 
+ bottom: 0; 
+ left: 0; 
+ z-index: 2;
+ background: url('Blank-Canvas.jpg') no-repeat;
+ background-size: 100% auto;
+ opacity: 1;
+
+
+}
+
+
+
+.navbar 
+{
+  margin-bottom: 0;
 }
 
 // .jumbotron-text

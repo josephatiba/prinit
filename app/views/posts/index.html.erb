@@ -1,20 +1,23 @@
+<div class="container indexcont" ng-mouseenter="main.tileClass(); main.testFunc()">
 <h1>Discover + Print</h1>
+{{4 + 4}} 
  
 
 <h2><%= link_to('Upload new images', new_post_path) %></h2>
 
   <div> 
 
-    <!-- user posts -->
-    <% @posts.each do |post| %>
-    <% if post.public == true %>
-          <div>
-            <%= link_to image_tag(post.image.url(:tile)), post %>
-            <p class="post-title"><%= link_to post.title, post, class: "user-index-post-title" %></p>
-          </div>
-      <% end %> 
-    <% end %>  
+      <!-- user posts -->
+      <% @posts.each do |post| %>
+      <% if post.public == true %>
+            <div>
+              <%= link_to image_tag(post.image.url(:tile), class: "indexImg"), post %>
+              <p class="post-title"><%= link_to post.title, post, class: "user-index-post-title" %></p>
+              <p>{{  }}</p>
+            </div>
+        <% end %> 
+      <% end %>  
 
-        
+    </div>  
    
 </div>
