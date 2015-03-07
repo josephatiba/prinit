@@ -23,17 +23,30 @@ $pushed: 90%;
 $header-height: 60px;
 $max-width: 100%;
 
-
+// // // // // // // 
+    // post index styling
+// // // // // // 
 .indexcont
 {
   border: 1px solid black;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.post-index-title
+{
+  position: relative;
 }
 
 .imgDiv 
 {
   position: relative;
   display: inline-block;
+}
 
+.img-link
+{
+  list-style: none;
 }
 
 .max-height
@@ -50,10 +63,11 @@ $max-width: 100%;
 {
   z-index: 10;
 }
+// // // // // // // // // // // 
 
+// HTML & Body styling
 
-// HTML & Body
-
+// // // // // // // 
 #view-container
 {
  padding: 0;
