@@ -11,9 +11,9 @@
       <% @posts.each do |post| %>
       <% if post.public == true %>
             <div>
-              <%= link_to image_tag(post.image.url(:tile), class: "indexImg"), post %>
+              <%= link_to image_tag(post.image.url(:tile), class: "indexImg {{ main.mosaicClass }}"), post %>
               <p class="post-title"><%= link_to post.title, post, class: "user-index-post-title" %></p>
-              <p>{{  }}</p>
+              <p></p>
             </div>
         <% end %> 
       <% end %>  

@@ -24,6 +24,8 @@
 
         var indexImage = document.getElementsByClassName("indexImg");
 
+        self.mosaicClass = '';
+
         self.tileClass = function(){
           console.log('taterSalad');
         }
@@ -38,17 +40,18 @@
             var two_mod = i % 2 == 0;
             var three_mod = i % 3 == 0;
             
-            if(i == 0){
-              console.log('o size');
-            } else if (i == 1){ 
+            if(zero){
+              console.log('0 size');
+              self.mosaicClass = 'taterSalad';
+            } else if (one){ 
               console.log('1 size');
             }
-            else if (i % 2 == 0 && i % 3 == 0){ 
+            else if (two_three_mod){ 
               console.log('two three mod');
-            } else if (i % 2 == 0){ 
+            } else if (two_mod){ 
               console.log('two mod');
             }
-            else if (i % 3 == 0){ 
+            else if (three_mod){ 
               console.log('three mod');
             }
             else {
