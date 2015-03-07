@@ -1,23 +1,23 @@
-<div class="container indexcont" ng-mouseenter="main.tileSize(); main.imgArrayFunc(); main.testFunc()">
+<div class="container masonry-container indexcont" ng-mouseenter="main.tileSize(); main.imgArrayFunc(); main.testFunc()">
 <h1>Discover + Print</h1>
 {{4 + 4}} 
  
 
 <h2><%= link_to('Upload new images', new_post_path) %></h2>
 
-  <div> 
+
 
       <!-- user posts -->
       <% @posts.each do |post| %>
       <% if post.public == true %>
-            <div>
+            <div class="imgDiv">
               <%= link_to image_tag(post.image.url(:tile), class: "indexImg"), post %>
-              <p class="post-title"><%= link_to post.title, post, class: "user-index-post-title" %></p>
+             
               
             </div>
         <% end %> 
       <% end %>  
-
-    </div>  
+  <%= image_tag 'http://lorempixel.com/output/nightlife-q-c-640-480-6.jpg' %>
+ 
    
 </div>
