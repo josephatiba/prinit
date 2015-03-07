@@ -28,40 +28,34 @@
           console.log('taterSalad');
         }
 
+  
+
         self.testFunc = function() {
           for(i = 0; i < indexImage.length; i++){
-            switch (i) {
-              case 0:
-                console.log('0 size');
-                break;
-              case 1:
-                console.log('1 size');
-                break;
-              case (i % 2 == 0 && i % 3 == 0):
-                console.log('mod 2 and mode 3 size');
-                break;
-              case (i % 2 == 0):
-                console.log('mod 2');
-                break;
-              case (i % 3 == 0):
-                console.log('mod 3');
-                break;
-              default:
-                console.log('around the world');
-              } 
-            }   
+            var zero = i == 0;
+            var one = i == 1;
+            var two_three_mod = i % 2 == 0 && i % 3 == 0;
+            var two_mod = i % 2 == 0;
+            var three_mod = i % 3 == 0;
+            
+            if(i == 0){
+              console.log('o size');
+            } else if (i == 1){ 
+              console.log('1 size');
+            }
+            else if (i % 2 == 0 && i % 3 == 0){ 
+              console.log('two three mod');
+            } else if (i % 2 == 0){ 
+              console.log('two mod');
+            }
+            else if (i % 3 == 0){ 
+              console.log('three mod');
+            }
+            else {
+              console.log('default');
+            }
+          }
         }
-
-        // self.testFunc = function() {
-        //   for(i = 0; i < indexImage.length; i++){
-        //     if(i == 0){
-        //       console.log('large');
-              
-        //     } else {
-        //     console.log(indexImage[i]);
-        //     }
-        //   }
-        // }
 
         
 
