@@ -1,4 +1,4 @@
-<div class="container indexcont" ng-mouseenter="main.tileClass(); main.testFunc()">
+<div class="container indexcont" ng-mouseenter="main.tileSize(); main.imgArrayFunc(); main.testFunc()">
 <h1>Discover + Print</h1>
 {{4 + 4}} 
  
@@ -11,9 +11,9 @@
       <% @posts.each do |post| %>
       <% if post.public == true %>
             <div>
-              <%= link_to image_tag(post.image.url(:tile), class: "indexImg {{ main.mosaicClass }}"), post %>
+              <%= link_to image_tag(post.image.url(:tile), class: "indexImg"), post %>
               <p class="post-title"><%= link_to post.title, post, class: "user-index-post-title" %></p>
-              <p></p>
+              
             </div>
         <% end %> 
       <% end %>  

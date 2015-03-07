@@ -22,44 +22,83 @@
 
         self.getVariantId = '';
 
+        var photos = [];
+
         var indexImage = document.getElementsByClassName("indexImg");
 
-        self.mosaicClass = '';
+        var imgArrayCreator = photos.push(indexImage);
 
-        self.tileClass = function(){
+        var photoArray = photos[0];
+
+        self.imgArrayFunc = function() {
+          for(i = 0; i < indexImage.length; i++){
+            photos.push(indexImage[i]);
+          }
+        }
+
+        self.smallClass = '';
+        self.mediumClass = '';
+        self.largeClass = '';
+        self.defaultClass = '';
+
+        self.testFunc = function(){
           console.log('taterSalad');
+          console.log(indexImage);
+          console.log(photoArray[0]);
         }
 
   
 
-        self.testFunc = function() {
-          for(i = 0; i < indexImage.length; i++){
-            var zero = i == 0;
-            var one = i == 1;
-            var two_three_mod = i % 2 == 0 && i % 3 == 0;
-            var two_mod = i % 2 == 0;
-            var three_mod = i % 3 == 0;
+        self.tileSize = function() {
+          for(i = 0; i < photoArray.length; i++){
+
+            var zero = i === 0;
+            var one = i === 1;
+            var two_three_mod = i % 2 === 0 && i % 3 === 0;
+            var two_mod = i % 2 === 0;
+            var three_mod = i % 3 === 0;
             
             if(zero){
               console.log('0 size');
-              self.mosaicClass = 'taterSalad';
-            } else if (one){ 
+              var z = i;
+              console.log(z);
+              photoArray[z].setAttribute('height', '500');
+            } 
+            else if (one) { 
               console.log('1 size');
+              var z = i;
+              console.log(z);
+              photoArray[z].setAttribute('height', '300');
             }
-            else if (two_three_mod){ 
+            else if (two_three_mod) { 
               console.log('two three mod');
-            } else if (two_mod){ 
+              var z = i;
+              console.log(z);
+              photoArray[z].setAttribute('height', '400');
+            } 
+            else if (two_mod) { 
               console.log('two mod');
+              self.smallClass = 'smallBox';
+              var z = i;
+              console.log(z);
+              photoArray[z].setAttribute('height', '300');
             }
             else if (three_mod){ 
               console.log('three mod');
+              var z = i;
+              console.log(z);
+              photoArray[z].setAttribute('height', '250');
             }
             else {
               console.log('default');
+              var z = i;
+              console.log(z);
+              photoArray[z].setAttribute('height', '350');
             }
           }
         }
 
+        
         
 
       // Dynamically displays images
