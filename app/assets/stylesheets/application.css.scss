@@ -75,7 +75,9 @@ $max-width: 100%;
 
 .notice, .alert 
 {
-  margin: 0;
+  position: relative;
+  top: 40px;
+
 }
 
 
@@ -132,7 +134,7 @@ img {
   bottom: 0; 
   left: 0; 
   z-index: 2;
-  background: url('Blank-Canvas.jpg') no-repeat;
+  background: url('empty-canvas.jpg') no-repeat;
   background-size: 100% auto;
   opacity: 1;
   .jumbotron 
@@ -162,10 +164,9 @@ img {
 
 
 
-// #jumbotron-text
-// {
-//   color: white;
-// }
+
+
+
 
 
 
