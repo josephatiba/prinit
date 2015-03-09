@@ -32,6 +32,10 @@ class PictureUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [nil, 315]
   end
 
+  version :carousel_slide do 
+    process :resize_to_fit => [nil, 500]
+  end
+
   version :post_thumbnail do 
     process :resize_to_fill => [200, 200]
   end

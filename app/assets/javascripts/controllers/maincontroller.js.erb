@@ -22,6 +22,8 @@
 
         self.getVariantId = '';
 
+        self.getImgRotation = '';
+
         var photos = [];
 
         var indexImage = document.getElementsByClassName("indexImg");
@@ -45,6 +47,11 @@
           console.log('taterSalad');
           console.log(indexImage);
           console.log(photoArray[0]);
+        }
+
+        self.imgRotateLeft = function() {
+          self.getImgRotation = 'rotate90';
+          console.log("rotate90");
         }
 
   

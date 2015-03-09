@@ -10,9 +10,17 @@
 
 
      
-     <img class="center-block version" ng-show="main.display_two_to_three_l" src="<%= @post.image.url(:two_to_three) %>">
+     <img class="center-block version {{main.getImgRotation}}" ng-show="main.display_two_to_three_l" src="<%= @post.image.url(:two_to_three) %>">
      
-     <img class="center-block version" ng-show="main.display_two_to_three" src="<%= @post.image.url(:two_to_three_l) %>">
+     <img class="center-block version {{main.getImgRotation}}" ng-show="main.display_two_to_three" src="<%= @post.image.url(:two_to_three_l) %>">
+
+     <div class="text-right">
+          <button type="button" class="btn btn-default btn-lg size-button" ng-click="main.imgRotateLeft()">Rotate left</button>
+
+
+          <button type="button" class="btn btn-default btn-lg size-button" ng-click="">Rotate Right</button>
+
+        </div>
 
      <div class="row text-center">
 
@@ -38,7 +46,7 @@
           <h4 class="text-center"><%= @printful.model_name %> Layouts</h4>
 
       <div class="text-center">
-          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three_l('<%= @post.image.url(:two_to_three_l) %>')">Landscape</button>
+          <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three_l('<%= @post.image.url(:two_to_three_l) %>')">Landscape Or (wide angle when used in conjunction with rotate"</button>
 
 
           <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three('<%= @post.image.url(:two_to_three) %>')">Portrait</button>
