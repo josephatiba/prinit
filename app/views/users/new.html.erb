@@ -10,6 +10,11 @@
       <br>
 
         <div class="form-group">
+          <%= f.label :prof_pic %>
+          <%= f.file_field :prof_pic, class: "form-control" %>
+        </div>
+
+        <div class="form-group">
            <%= f.label :first_name %>
            <%= f.text_field :first_name, value: @user.first_name, class: "form-control" %>
         </div>

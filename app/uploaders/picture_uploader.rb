@@ -32,6 +32,14 @@ class PictureUploader < CarrierWave::Uploader::Base
     process :resize_to_fit => [nil, 315]
   end
 
+  version :post_thumbnail do 
+    process :resize_to_fill => [200, 200]
+  end
+
+  version :profile_pic do 
+    process :resize_to_fill => [150, 150]
+  end
+
   # version :post_pic do 
   #   process :resize_to_fit => [nil, 400]
   # end

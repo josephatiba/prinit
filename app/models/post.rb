@@ -2,7 +2,7 @@ class Post
   include Mongoid::Document
   include Mongoid::Timestamps
 
-  # the field is title instead of name 
+  
   field :title, type: String
   field :price, type: Float
   field :description, type: String

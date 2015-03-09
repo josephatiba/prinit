@@ -34,11 +34,9 @@ class ChargesController < ApplicationController
       :description => 'Prinit',
       :currency    => 'usd'
     )
-    # @order.stripe_id = charge.id
-    # @order.order_date = Time.new
-    # @order.save
-    # puts " ***************** charge"
-    # puts charge.id
+    
+    session.delete :order_id
+   
 
     rescue Stripe::CardError => e
       flash[:error] = e.message

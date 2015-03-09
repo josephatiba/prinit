@@ -1,11 +1,10 @@
 
-<% if current_user == @user %>
-  <%= link_to "Edit #{@user.first_name}'s Information", edit_user_path(@user) %>
-    <%= link_to "Cancel #{@user.first_name}'s account?", :user, method: :delete, data: {confirm: "Are you sure you want to remove your account, #{@user.first_name}? You are Magnificent and we'd like you to stay!"} %>
-<% end %>
+
 
 <div class="container text-center center-block">
   <div class="row">
+
+    <%= image_tag(@user.prof_pic.url(:profile_pic)) %>
    
               <h1> <%= @user.first_name %>  <%= @user.last_name %></h1>
 
@@ -19,7 +18,12 @@
             
         </div>
 
-      
+  <div class="row">    
+    <% if current_user == @user %>
+      <%= link_to "Edit #{@user.first_name}'s Information", edit_user_path(@user) %>
+        <%= link_to "Cancel #{@user.first_name}'s account?", :user, method: :delete, data: {confirm: "Are you sure you want to remove your account, #{@user.first_name}? You are Magnificent and we'd like you to stay!"} %>
+    <% end %>
+  </div> 
 
 
          
@@ -31,7 +35,7 @@
     <!-- user posts -->
     <% @user.posts.each do |post| %>
       <div class="box panel panel-default">
-        <%= link_to image_tag(post.image.url(:tile)), post %>
+        <%= link_to image_tag(post.image.url(:post_thumbnail)), post %>
         <p><%= link_to post.title, post %></p>
         </div>  
     <% end %>   

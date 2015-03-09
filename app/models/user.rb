@@ -21,7 +21,9 @@ class User
   field :last_name, type: String
   field :category, type: String
   field :bio, type: String
-  field :contact_info, type: String
+  field :contact_info, type: String 
+
+  mount_uploader :prof_pic, PictureUploader
 
 
   def password=(unencrypted_password)

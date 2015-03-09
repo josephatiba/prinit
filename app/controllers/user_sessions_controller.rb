@@ -18,6 +18,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     session.delete :user_id
+    session.delete :order_id
     redirect_to "/"
   end
 
