@@ -1,21 +1,23 @@
-<% if !@order_item.nil? && @order_item.errors.any? %>
-  <div class="alert alert-danger">
-    <ul>
-    <% @order_item.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
-<% if @order_items.size == 0 %>
-  <p class="text-center">
-    There are no items in your shopping cart.  Please <%= link_to "go back", posts_path %> and add some items to your cart.
-  </p>
-<% else %>
-
-<%= link_to 'Check Out', new_charge_path, class: 'btn btn-success' %>
-<input type="button" value="Click here to refresh after deleteting an item!" onClick="window.location.href=window.location.href" class="btn btn-primary pull-right"> 
-  <% @order_items.each do |order_item| %>
-    <%= render 'carts/cart_row', post: order_item.post, order_item: order_item, show_total: true %>
+<div class="container"> 
+  <% if !@order_item.nil? && @order_item.errors.any? %>
+    <div class="alert alert-danger">
+      <ul>
+      <% @order_item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
-<% end %>
+  <% if @order_items.size == 0 %>
+    <p class="text-center">
+      There are no items in your shopping cart.  Please <%= link_to "go back", posts_path %> and add some items to your cart.
+    </p>
+  <% else %>
+
+  <%= link_to 'Check Out', new_charge_path, class: 'btn btn-success' %>
+  <input type="button" value="Click here to refresh after deleteting an item!" onClick="window.location.href=window.location.href" class="btn btn-primary pull-right"> 
+    <% @order_items.each do |order_item| %>
+      <%= render 'carts/cart_row', post: order_item.post, order_item: order_item, show_total: true %>
+    <% end %>
+  <% end %>
+</div>

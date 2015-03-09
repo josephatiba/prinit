@@ -28,13 +28,13 @@
 
          
 
-        <div class="container">
+        <div class="container gallery">
           <div id="posts" class="center-block"> 
             <h6> <%= @user.first_name %>'s Porftolio </h6>
 
     <!-- user posts -->
     <% @user.posts.each do |post| %>
-      <div class="box panel panel-default">
+      <div>
         <%= link_to image_tag(post.image.url(:post_thumbnail)), post %>
         <p><%= link_to post.title, post %></p>
         </div>  
@@ -45,6 +45,8 @@
       </div>
    
 </div>
+
+
 
 
 

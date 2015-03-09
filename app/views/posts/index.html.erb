@@ -3,21 +3,22 @@
 {{4 + 4}} 
  
 
-<h2><%= link_to('Upload new images', new_post_path) %></h2>
 
 
-<div class="text-center">
+
+<div class="text-center masonry-container center-block">
+<h3><%= link_to('Add something new', new_post_path) %></h3>
       <!-- user posts -->
       <% @posts.each do |post| %>
       <% if post.public == true %>
             <div class="imgDiv">
-              <%= link_to image_tag(post.image.url(:tile), class: "indexImg center-block"), post  %>
+              <%= link_to image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block"), post  %>
              
               
             </div>
         <% end %> 
       <% end %>  
-  <%= image_tag 'http://lorempixel.com/output/nightlife-q-c-640-480-6.jpg' %>
+
 </div>
    
 </div>

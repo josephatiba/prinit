@@ -1,11 +1,7 @@
 
 <div class="container">
 <!-- post title -->
-  <div class="row">
-
-    <h1><%= @post.title %> by <%= link_to(@post.user.username, user_path(@post.user_id)) %></h1>
-
-  </div>
+  
 
 <!-- Post Image -->
   <div class="row">
@@ -18,22 +14,36 @@
      
      <img class="center-block version" ng-show="main.display_two_to_three" src="<%= @post.image.url(:two_to_three_l) %>">
 
+     <div class="row text-center">
+
+         <h2><%= @post.title %> by <%= link_to(@post.user.username, user_path(@post.user_id)) %></h2>
+
+     </div>
+
+        <div class="text-center">
+             <% if current_user == @post.user %>
+            <p><%= link_to('Edit Image', edit_post_path) %></p>
+            <%= link_to "Delete", post_path(@post), class: "post-show-link", method: :delete, data: { confirm: " are you sure you want to delete this image?" } %> 
+            <% end %>
+        </div>
    
     </div>
 
   
 
-
+<br>
 
       <div class="row size-buttons-div center-block" ng-model="clicked">
         
-          <h4><%= @printful.model_name %> Layouts</h4>
+          <h4 class="text-center"><%= @printful.model_name %> Layouts</h4>
 
-
+      <div class="text-center">
           <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three_l('<%= @post.image.url(:two_to_three_l) %>')">Landscape</button>
 
 
           <button type="button" class="btn btn-info btn-lg size-button" ng-click="main.show_two_to_three('<%= @post.image.url(:two_to_three) %>')">Portrait</button>
+
+        </div>
         
       </div>
 
@@ -45,15 +55,11 @@
             <!-- form -->
       
       <div class="row">
-        <%= link_to 'Check Out', new_charge_path, class: 'btn btn-success' %>
+        <%= link_to 'Check Out', new_charge_path, class: 'btn btn-success pull-right' %>
 
       </div>
 
-    <% if current_user == @post.user %>
-    <p><%= link_to('Edit Image', edit_post_path) %></p>
-    <%= link_to "Delete", post_path(@post), class: "post-show-link", method: :delete, data: { confirm: " are you sure you want to delete this image?" } %> 
-
-    <% end %>
+    
 
   </div>
 

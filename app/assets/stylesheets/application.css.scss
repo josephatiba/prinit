@@ -33,6 +33,12 @@ $max-width: 100%;
   padding-right: 0;
 }
 
+.masonry-container
+{
+  max-width: 80%;
+  border: 3px solid blue;
+}
+
 .post-index-title
 {
   position: relative;
@@ -42,6 +48,11 @@ $max-width: 100%;
 {
   position: relative;
   display: inline-block;
+  float: left;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  margin-bottom: 1em;
+
 }
 
 .img-link
@@ -162,6 +173,24 @@ img {
   width: auto;
 }
 
+
+// // // // // // // // // // // 
+
+// User Show page Styling
+
+// // // // // // // 
+
+.padding-left
+{
+  display: inline-block;
+}
+
+
+.gallery
+{
+  max-width: 80%;
+  border: 3px solid blue;
+}
 
 
 
