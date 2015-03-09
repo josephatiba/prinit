@@ -118,31 +118,33 @@ img {
   margin: 0 auto;
 }
 
-.jumbotron 
-{
- background: none;
-}
+// // // // // // // // // // // 
+
+// Home Page Styling
+
+// // // // // // // 
 
 .home-container 
 {
- 
- // -webkit-background-size: cover;
- // -moz-background-size: cover;
- // -o-background-size: cover;
- // background-size: cover;
- // margin: 20px 0 0 0;
- // height: 700px;
- position: fixed; 
- top: 0; 
- right: 0; 
- bottom: 0; 
- left: 0; 
- z-index: 2;
- background: url('Blank-Canvas.jpg') no-repeat;
- background-size: 100% auto;
- opacity: 1;
-
-
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  z-index: 2;
+  background: url('Blank-Canvas.jpg') no-repeat;
+  background-size: 100% auto;
+  opacity: 1;
+  .jumbotron 
+  {
+    background: none;
+    .jumbotron-text 
+    {
+      position: absolute;
+      top: 30%;
+      left: 25%;
+    }
+  }
 }
 
 // Header | navbar styling
@@ -158,10 +160,7 @@ img {
   width: auto;
 }
 
-// .jumbotron-text
-// {
-//   color: white;
-// }
+
 
 // #jumbotron-text
 // {
