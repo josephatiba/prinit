@@ -4,7 +4,6 @@
  
 
 <!-- Large modal -->
-<a class="btn btn-primary" data-toggle="modal" href='#modal-id'>Trigger modal</a>
 <div class="modal fade" id="modal-id">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
@@ -22,8 +21,12 @@
         <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
     </ol>
     <div class="carousel-inner">
-        <div class="item active">
-            <img data-src="holder.js/900x500/auto/#777:#7a7a7a/text:First slide" alt="First slide" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojN2E3YTdhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+">
+        
+            <% @posts.each do |post| %>
+             <% if post.public == true %>
+
+            <div class="item {{main.activeCarouselIndex}}">
+            <%= image_tag(post.image.url(:carousel_slide), class: "carouselSlide") %>
             <div class="container">
                 <div class="carousel-caption">
                     <h1>Example headline.</h1>
@@ -31,7 +34,11 @@
                     <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
                 </div>
             </div>
-        </div>
+          </div>
+
+            <% end %>
+           <% end %>
+        
     </div>
     <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
     <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
@@ -55,12 +62,15 @@
             <% @posts.each do |post| %>
             <% if post.public == true %>
                   <div class="imgDiv">   
-                   <a class="btn" data-toggle="modal" href='#modal-id'><%= image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block") %></a>
+                   <a class="thumbnail-modal-trigger" data-toggle="modal" href='#modal-id' ng-click="main.setIdVar()"><%= image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block") %></a>
+                   <p>{{thumbIndex}}</p>
+                   <!-- add img alts in there -->
                     
                   </div>
               <% end %> 
             <% end %>  
         </div>
+
   </div>
      
 </div>

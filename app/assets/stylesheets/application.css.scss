@@ -46,6 +46,8 @@ $max-width: 100%;
   position: relative;
 }
 
+
+
 .imgDiv 
 {
   position: relative;
@@ -53,6 +55,14 @@ $max-width: 100%;
   padding-right: 0.5em;
   padding-left: 0.5em;
   margin-bottom: 1em;
+}
+
+.thumbnail-modal-trigger 
+{
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 
