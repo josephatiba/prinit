@@ -22,6 +22,9 @@
 
         self.getVariantId = '';
 
+
+
+
         self.getImgRotation = '';
 
         self.activeCarouselIndex = '';
@@ -34,11 +37,29 @@
 
         var items = [];
 
+
+
         var indexImage = document.getElementsByClassName("indexImg");
 
         var slideImage = document.getElementsByClassName("carouselSlide");
 
         var carouselItems = document.getElementsByClassName("thumbnail-modal-trigger");
+
+
+        var activateItemsArray = [];
+
+        var cItems = document.getElementsByClassName("item");
+
+        var activateItemsCatcher = activateItemsArray.push(cItems);
+
+        var activateItems = activateItemsArray[0];
+
+
+
+
+
+  
+
 
 
 
@@ -50,7 +71,7 @@
 
         var photoArray = photos[0];
 
-        var carouselPhotoArray = carouselPhotos[0];
+        self.carouselPhotoArray = carouselPhotos[0];
 
         var carouselItemsArray = carouselItems[0];
 
@@ -58,47 +79,37 @@
 
         self.idVar = '';
 
-        $('.imgDiv').on('click', function(){
+        $('.imgDiv').mousedown(function(){
           console.log($(this).index());
           self.idVar = $(this).index();
-          console.log(self.idVar);
+          $(activateItems[self.idVar]).addClass('active');
+          // activateItems[self.idVar].addClass('active');
+          // self.activeCarouselIndex = self.idVar;
+          console.log(self.activeCarouselIndex);
         })
 
 
-
-        // self.setIdVar = function(){
-        //   // items.push(carouselItems);
-        //   for(i = 0; i < items[0].length; i++){
-        //     var z = i;
-        //     if(z === i) {
-        //       items[0][i].setAttribute("id", z);
-        //     }
-        //     items[0][i].classList.add("dasTest");
-        //     }
-        // }
-
-
-
-        self.imgArrayFunc = function() {
-          for(i = 0; i < indexImage.length; i++){
-            photos.push(indexImage[i]);
-            carouselPhotos.push(slideImage[i]);
+// self.activeSlide = function() {
+//           for(i = 0; i < photoArray.length; i++){
             
-          }
-          
-        }
+//           }
 
-        self.smallClass = '';
-        self.mediumClass = '';
-        self.largeClass = '';
-        self.defaultClass = '';
+//         }
+
+
+
+        // self.smallClass = '';
+        // self.mediumClass = '';
+        // self.largeClass = '';
+        // self.defaultClass = '';
 
         self.testFunc = function(){
           console.log('taterSalad');
           // console.log(carouselPhotoArray[0]);
            
            
-           console.log(this.imagelist);
+           // console.log(activateItems);
+
 
         }
 
@@ -109,77 +120,6 @@
 
      
 
-        // self.setActiveSlide = function(e) {
-        //   items.push(carouselItems);
-
-        //   e.currentTarget.classList.add("dasTest");
-
-        //   var chip = document.querySelector(".dasTest");
-
-        //   console.log(chip);
-
-
-        //     for(i = 0; i < items[0].length; i++){
-        //       if(items[0][i] === chip){
-        //         console.log(i);
-        //       }
-        //     }
-        //   }
-
-          // self.evtSetup = function(){
-          //  items.push(carouselItems);
-          //  this.imagelist = items;
-          //  for(i = 0; i < items[0].length; i++){
-          //    var z = i + 1;
-          //    var linkClass = items[0][i].classList;
-          //    var compareClass = items[0][z].classList;
-            
-          //     var chip = document.querySelector(".dasTest");
-          //     if(linkClass === linkClass){
-          //       items[0][i].classList.add("dasTest");
-          //       for(m = 0; m < items[0].length; m++){
-          //         if(items[0][m] === chip){
-          //           self.activeThumbnailGetter = m;
-          //           console.log(m);
-          //         }
-          //         else {
-          //           console.log(chip);
-          //           console.log("yeeks");
-          //         }
-          //       }
-          //     }
-          //   }
-          //   console.log(self.activeThumbnailGetter);
-          // }
-
-
-        // self.setActiveSlide = function() {
-        //   items.push(carouselItems);
-        //   items[0][3].classList.add("dasTest")
-        //   var yee = items.findIndex("class", "dasTest");
-        //   // console.log(items[0][0]);
-        //   console.log(yee);
-          
-          
-        //   }
-
-
-        //  self.setActiveSlide = function() {
-        //   for(i = 0; i < photoArray.length; i++){
-        //     var isActive = true;
-        //     if (isActive){
-        //       var z = i;
-        //     // self.activeThumbnailGetter = '';
-        //     console.log(items[z].classList);
-        //     items[z].classList.add("clickedThumbnail");
-        //     // 
-        //     // console.log(yee);
-        //     }
-        //     isActive = false;
-        //   }
-
-        // }
-  
 
         // self.tileSize = function() {
         //   for(i = 0; i < photoArray.length; i++){
