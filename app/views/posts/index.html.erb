@@ -15,11 +15,7 @@
 
 
 <div id="slide-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
-    <ol class="carousel-indicators">
-        <li data-target="#slide-carousel" data-slide-to="0" class=""></li>
-        <li data-target="#slide-carousel" data-slide-to="1" class=""></li>
-        <li data-target="#slide-carousel" data-slide-to="2" class="active"></li>
-    </ol>
+  
     <div class="carousel-inner">
         
             <% @posts.each do |post| %>
@@ -29,9 +25,9 @@
             <%= image_tag(post.image.url(:carousel_slide), class: "carouselSlide") %>
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>Example headline.</h1>
-                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                    <h1><%= link_to(post.title, posts_path(@post), class: "individual-post-title") %></h1>
+                    <p>by <%= post.user.username %></p>
+                    <p>
                 </div>
             </div>
           </div>
@@ -63,9 +59,7 @@
             <% if post.public == true %>
                   <div class="imgDiv">   
                    <a class="thumbnail-modal-trigger" data-toggle="modal" href='#slide-modal' ng-click="main.setIdVar()"><%= image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block") %></a>
-                   <p>{{thumbIndex}}</p>
-                   <!-- add img alts in there -->
-                    
+                  <%= link_to(post.title, posts_path(@post), class: "individual-post-title") %>
                   </div>
               <% end %> 
             <% end %>  

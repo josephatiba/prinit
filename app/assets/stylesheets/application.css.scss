@@ -13,15 +13,36 @@
  *= require_tree .
  *= require_self
  */
-
+@import "bootswatch/yeti/variables";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "bootswatch/yeti/bootswatch";
 
 
 // Distance
 $pushed: 90%;
 $header-height: 60px;
 $max-width: 100%;
+
+// // // // // // // // // // // 
+
+// HTML & Body styling
+
+// // // // // // //
+body { padding-top: 60px; }
+ 
+#view-container
+{
+ padding: 0;
+}
+
+.notice, .alert 
+{
+  position: relative;
+  top: 40px;
+
+}
+
 
 // // // // // // // 
     // post index styling
@@ -88,35 +109,23 @@ $max-width: 100%;
 }
 // // // // // // // // // // // 
 
-// HTML & Body styling
+// index Slide modal & carousel strling
 
 // // // // // // // 
-#view-container
+
+
+.carouselSlide
 {
- padding: 0;
-}
-
-.notice, .alert 
-{
-  position: relative;
-  top: 40px;
-
+  margin: 0 auto;
 }
 
 
 
-
-img {
-  .post-title 
-  {
-    display: inline-block;
-    position: relative;
-    top: -50px;
-  }
-}
+// // // // // // // // // // // 
 
 // individual post style
 
+// // // // // // // 
 
 .size-buttons-div 
 {

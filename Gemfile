@@ -39,6 +39,8 @@ gem 'masonry-rails', '~> 0.2.4'
 
 gem 'bson_ext'
 
+gem 'bootswatch-rails', '~> 3.2.4'
+
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'twitter'

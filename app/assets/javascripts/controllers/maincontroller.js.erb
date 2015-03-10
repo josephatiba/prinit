@@ -27,15 +27,19 @@
 
         self.getImgRotation = '';
 
-        self.activeCarouselIndex = '';
+   
 
-        self.activeThumbnailGetter = '';
+    
 
         var photos = [];
 
         var carouselPhotos = [];
 
         var items = [];
+
+         var activateItemsArray = [];
+
+         var postLinks = [];
 
 
 
@@ -45,23 +49,15 @@
 
         var carouselItems = document.getElementsByClassName("thumbnail-modal-trigger");
 
-
-        var activateItemsArray = [];
+        var getImgLink = document.getElementsByClassName("individual-post-title");
 
         var cItems = document.getElementsByClassName("item");
 
-        var activateItemsCatcher = activateItemsArray.push(cItems);
-
-        var activateItems = activateItemsArray[0];
 
 
+        var postLinkArrayCreator = postLinks.push(getImgLink);
 
-
-
-  
-
-
-
+        var activateItemsCreator = activateItemsArray.push(cItems);
 
         var imgArrayCreator = photos.push(indexImage);
 
@@ -69,15 +65,32 @@
 
         var imagelistArrayCreator = items.push(carouselItems);
 
+
+
+        var activateItems = activateItemsArray[0];
+
         var photoArray = photos[0];
 
         self.carouselPhotoArray = carouselPhotos[0];
 
         var carouselItemsArray = carouselItems[0];
 
+        var postLinksArray = postLinks[0];
+
         
 
+
+
         self.idVar = '';
+
+        $('.imgDiv').mousedown(function(){
+          console.log($(this).index());
+          self.idVar = $(this).index();
+          for(i = 0; i < photoArray.length; i++) {
+            $(activateItems[i]).removeClass('active');
+          }
+          $(activateItems[self.idVar]).addClass('active');
+        })
 
         $('.imgDiv').mousedown(function(){
           console.log($(this).index());
@@ -92,31 +105,14 @@
         })
 
         
-        
 
 
-// self.activeSlide = function() {
-//           for(i = 0; i < photoArray.length; i++){
-            
-//           }
-
-//         }
-
-
-
-        // self.smallClass = '';
-        // self.mediumClass = '';
-        // self.largeClass = '';
-        // self.defaultClass = '';
 
         self.testFunc = function(){
           console.log('taterSalad');
-          // console.log(carouselPhotoArray[0]);
-           
-           
-           // console.log(activateItems);
+          console.log(postLinksArray);
 
-
+      
         }
 
         self.imgRotateLeft = function() {
