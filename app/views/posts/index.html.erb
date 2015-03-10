@@ -4,7 +4,7 @@
  
 
 <!-- Large modal -->
-<div class="modal fade" id="modal-id">
+<div class="modal fade" id="slide-modal">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -14,11 +14,11 @@
       <div class="modal-body">
 
 
-<div id="carousel-id" class="carousel slide" data-ride="carousel" data-interval="false">
+<div id="slide-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
     <ol class="carousel-indicators">
-        <li data-target="#carousel-id" data-slide-to="0" class=""></li>
-        <li data-target="#carousel-id" data-slide-to="1" class=""></li>
-        <li data-target="#carousel-id" data-slide-to="2" class="active"></li>
+        <li data-target="#slide-carousel" data-slide-to="0" class=""></li>
+        <li data-target="#slide-carousel" data-slide-to="1" class=""></li>
+        <li data-target="#slide-carousel" data-slide-to="2" class="active"></li>
     </ol>
     <div class="carousel-inner">
         
@@ -40,8 +40,8 @@
            <% end %>
         
     </div>
-    <a class="left carousel-control" href="#carousel-id" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-    <a class="right carousel-control" href="#carousel-id" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    <a class="left carousel-control" href="#slide-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#slide-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
 
         
@@ -62,7 +62,7 @@
             <% @posts.each do |post| %>
             <% if post.public == true %>
                   <div class="imgDiv">   
-                   <a class="thumbnail-modal-trigger" data-toggle="modal" href='#modal-id' ng-click="main.setIdVar()"><%= image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block") %></a>
+                   <a class="thumbnail-modal-trigger" data-toggle="modal" href='#slide-modal' ng-click="main.setIdVar()"><%= image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block") %></a>
                    <p>{{thumbIndex}}</p>
                    <!-- add img alts in there -->
                     

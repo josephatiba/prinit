@@ -82,11 +82,17 @@
         $('.imgDiv').mousedown(function(){
           console.log($(this).index());
           self.idVar = $(this).index();
+          for(i = 0; i < photoArray.length; i++) {
+            $(activateItems[i]).removeClass('active');
+          }
           $(activateItems[self.idVar]).addClass('active');
           // activateItems[self.idVar].addClass('active');
           // self.activeCarouselIndex = self.idVar;
           console.log(self.activeCarouselIndex);
         })
+
+        
+        
 
 
 // self.activeSlide = function() {
