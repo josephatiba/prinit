@@ -5,16 +5,25 @@
 
 <!-- Large modal -->
 <div class="modal fade" id="slide-modal">
+
+  <button type="button" id="modal-close" class="close" data-dismiss="modal" aria-hidden="true"><%= link_to(image_tag('noun_100498_cc.png', alt: "", id: "modal-close")) %></button>
+ 
+
+<!-- carousel controls -->
+    <div id="gly-div-left">
+         <a class="left carousel-control" href="#slide-carousel" data-slide="prev"><span class="glyphicon glyphicon-menu-left"></span></a>
+      </div>
+        <div id="gly-div-right">
+        <a class="right carousel-control" href="#slide-carousel" data-slide="next"><span class="glyphicon glyphicon-menu-right"></span></a>
+      </div>
+
+
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title">Modal title</h4>
-      </div>
       <div class="modal-body">
 
-
-<div id="slide-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+<!-- carousel body -->
+  <div id="slide-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
   
     <div class="carousel-inner">
         
@@ -22,7 +31,7 @@
              <% if post.public == true %>
 
             <div class="item {{main.activeCarouselIndex}}">
-            <%= image_tag(post.image.url(:carousel_slide), class: "carouselSlide") %>
+            <%= image_tag(post.image.url(:carousel_slide), alt: post.description, class: "carouselSlide") %>
             <div class="container">
                 <div class="carousel-caption">
                     <h1><%= link_to(post.title, posts_path(@post), class: "individual-post-title") %></h1>
@@ -36,16 +45,12 @@
            <% end %>
         
     </div>
-    <a class="left carousel-control" href="#slide-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-    <a class="right carousel-control" href="#slide-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-</div>
+
+    </div>
 
         
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+      
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
@@ -59,7 +64,6 @@
             <% if post.public == true %>
                   <div class="imgDiv">   
                    <a class="thumbnail-modal-trigger" data-toggle="modal" href='#slide-modal' ng-click="main.setIdVar()"><%= image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block") %></a>
-                  <%= link_to(post.title, posts_path(@post), class: "individual-post-title") %>
                   </div>
               <% end %> 
             <% end %>  

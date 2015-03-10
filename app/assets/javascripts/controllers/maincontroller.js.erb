@@ -22,8 +22,7 @@
 
         self.getVariantId = '';
 
-
-
+        self.idVar = '';
 
         self.getImgRotation = '';
 
@@ -39,7 +38,7 @@
 
          var activateItemsArray = [];
 
-         var postLinks = [];
+    
 
 
 
@@ -49,13 +48,10 @@
 
         var carouselItems = document.getElementsByClassName("thumbnail-modal-trigger");
 
-        var getImgLink = document.getElementsByClassName("individual-post-title");
-
         var cItems = document.getElementsByClassName("item");
 
 
 
-        var postLinkArrayCreator = postLinks.push(getImgLink);
 
         var activateItemsCreator = activateItemsArray.push(cItems);
 
@@ -75,13 +71,11 @@
 
         var carouselItemsArray = carouselItems[0];
 
-        var postLinksArray = postLinks[0];
 
         
 
 
 
-        self.idVar = '';
 
         $('.imgDiv').mousedown(function(){
           console.log($(this).index());
@@ -90,18 +84,6 @@
             $(activateItems[i]).removeClass('active');
           }
           $(activateItems[self.idVar]).addClass('active');
-        })
-
-        $('.imgDiv').mousedown(function(){
-          console.log($(this).index());
-          self.idVar = $(this).index();
-          for(i = 0; i < photoArray.length; i++) {
-            $(activateItems[i]).removeClass('active');
-          }
-          $(activateItems[self.idVar]).addClass('active');
-          // activateItems[self.idVar].addClass('active');
-          // self.activeCarouselIndex = self.idVar;
-          console.log(self.activeCarouselIndex);
         })
 
         
@@ -110,7 +92,6 @@
 
         self.testFunc = function(){
           console.log('taterSalad');
-          console.log(postLinksArray);
 
       
         }
