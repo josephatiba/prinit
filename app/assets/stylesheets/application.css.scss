@@ -50,7 +50,14 @@ body {
 {
   position: relative;
   top: 40px;
+}
 
+.container 
+{
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
 }
 
 // // // // // // // // // // // 
@@ -376,10 +383,10 @@ body {
 }
 
 
-.gallery
+.content-container
 {
-  max-width: 80%;
-  border: 3px solid blue;
+  max-width: 81%;
+  margin: 0 auto;
 }
 
 

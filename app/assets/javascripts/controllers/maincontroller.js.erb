@@ -24,11 +24,16 @@
 
         self.idVar = '';
 
-        self.getImgRotation = '';
+        // self.getImgRotation = '';
+
+        self.select = '';
 
    
 
-    
+        self.viewOptions = false;
+
+        self.viewPrice = true;
+
 
         var photos = [];
 
@@ -36,7 +41,10 @@
 
         var items = [];
 
-         var activateItemsArray = [];
+        var activateItemsArray = [];
+
+        var canvasOptionsArray = [];
+
 
     
 
@@ -49,10 +57,11 @@
         var carouselItems = document.getElementsByClassName("thumbnail-modal-trigger");
 
         var cItems = document.getElementsByClassName("item");
+        
+        var canvOptions = document.getElementsByClassName("size-button");
 
-
-
-
+      
+        // array creators
         var activateItemsCreator = activateItemsArray.push(cItems);
 
         var imgArrayCreator = photos.push(indexImage);
@@ -61,8 +70,12 @@
 
         var imagelistArrayCreator = items.push(carouselItems);
 
+        var canvOptionsArryCreator = canvasOptionsArray.push(canvOptions);
 
 
+
+
+        // fine-tuning array depth
         var activateItems = activateItemsArray[0];
 
         var photoArray = photos[0];
@@ -71,10 +84,26 @@
 
         var carouselItemsArray = carouselItems[0];
 
+        var canvasOptions = canvasOptionsArray[0];
 
-        
+
+        $('.size-button').click(function(){
+          console.log($(this).index());
+          self.select = $(this).index();
+          for(i = 0; i < canvasOptions.length; i++) {
+    
+            $(canvasOptions[i]).removeClass('clear-btn');
+            $(canvasOptions[i]).removeClass('btn-success');
+          
+          }
+          $(canvasOptions[self.select]).addClass('btn-success');
+          
+        })
 
 
+        self.viewPriceClicked = function (){
+          self.viewPrice = false;
+        }
 
 
         $('.imgDiv').mousedown(function(){
@@ -86,6 +115,12 @@
           $(activateItems[self.idVar]).addClass('active');
         })
 
+
+        self.viewOptionsClicked = function () {
+          self.viewOptions = true;
+          console.log("should be hidden");
+        }
+
         
 
 
@@ -96,10 +131,10 @@
       
         }
 
-        self.imgRotateLeft = function() {
-          self.getImgRotation = 'rotate90';
-          console.log("rotate90");
-        }
+        // self.imgRotateLeft = function() {
+        //   self.getImgRotation = 'rotate90';
+        //   console.log("rotate90");
+        // }
 
      
 
