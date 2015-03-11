@@ -53,10 +53,105 @@ body {
 
 }
 
+// // // // // // // // // // // 
+
+// Home Page Styling
+
+// // // // // // // 
+
+.home-container 
+{
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0; 
+  z-index: 2;
+  background: url('empty-canvas.jpg') no-repeat;
+  background-size: 100% auto;
+  opacity: 1;
+  .jumbotron 
+  { 
+    position: relative;
+    top: 20em;
+    margin: 0 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    background: none;
+    .jumbotron-text 
+    {
+      position: relative;
+      text-align: center;
+      .discover-btn
+      {
+        background: none;
+        color: black;
+        border: 1px solid black;
+      }
+      .discover-btn:hover
+      {
+        background: black;
+        color: white;
+        border: 1px solid black;
+      }
+    }
+  }
+}
+
+
+
+// Header | navbar styling
+.header 
+{
+  background: none;
+}
+
+.navbar 
+{
+  margin-bottom: 0;
+}
+
+.navbar 
+{
+  margin-bottom: 0;
+}
+
+.navbar-link
+{
+  color: black;
+}
+
+// .upload-icon
+// {
+//   height: 25px;
+//   width: auto;
+// }
+
+#nav-styles
+{
+  background: none;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.navbar-brand
+{
+  background-color: black;
+}
+
+.nav.navbar-nav li a {
+  color: black;
+  font-weight: 400;
+}
+
+
 
 // // // // // // // 
     // post index styling
 // // // // // // 
+
 .indexcont
 {
   border: 1px solid black;
@@ -119,7 +214,7 @@ body {
 }
 // // // // // // // // // // // 
 
-// index Slide modal & carousel strling
+// index Slide modal & carousel styling
 
 // // // // // // // 
 
@@ -164,6 +259,18 @@ body {
   padding-bottom: 0;
 }
 
+.view-post-btn
+{
+  background: none;
+  color: black;
+  border: 1px solid black;
+}
+.view-post-btn:hover
+{
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
 #gly-div-left
 {
   position: absolute;
@@ -242,84 +349,6 @@ body {
     transform: rotate(90deg);
 }
 
-// // // // // // // // // // // 
-
-// Home Page Styling
-
-// // // // // // // 
-
-.home-container 
-{
-  position: fixed; 
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
-  left: 0; 
-  z-index: 2;
-  background: url('empty-canvas.jpg') no-repeat;
-  background-size: 100% auto;
-  opacity: 1;
-  .jumbotron 
-  { 
-    position: relative;
-    top: 20em;
-    margin: 0 0;
-    padding-top: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    background: none;
-    .jumbotron-text 
-    {
-      position: relative;
-      text-align: center;
-    }
-  }
-}
-
-// Header | navbar styling
-.header 
-{
-  background: none;
-}
-
-.navbar 
-{
-  margin-bottom: 0;
-}
-
-.navbar 
-{
-  margin-bottom: 0;
-}
-
-.navbar-link
-{
-  color: black;
-}
-
-// .upload-icon
-// {
-//   height: 25px;
-//   width: auto;
-// }
-
-#nav-styles
-{
-  background: none;
-  font-size: 1.1em;
-  margin-top: 10px;
-}
-
-.navbar-brand
-{
-  background-color: black;
-}
-
-.nav.navbar-nav li a {
-  color: black;
-  font-weight: 400;
-}
 
 
 // // // // // // // // // // // 
