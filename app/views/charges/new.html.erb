@@ -1,6 +1,96 @@
-<div id="charges">
+<div class="container checkout center-block" id="charges">
   <%= form_tag charges_path(@order) do %>
+
+  <div class="content-container">
+      
+      <br />
+
+    <h3 class="text-center">Complete Checkout</h3>
+
+    <div class="form-inline">
+      <div class="form-group">
+        <%= label_tag :first_name %>
+        <%= text_field_tag :first_name, current_user.first_name, :class => "form-inline" %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :last_name %>
+        <%= text_field_tag :last_name, current_user.last_name, :class => "form-inline" %>
+      </div>
+    </div><!-- form line -->
+
+<br />
+
+    <p>Billing address</p>
+      
+      <div class="form-group">
+        <%= label_tag :address_line_1, nil, :class => 'sr-only' %>
+        <%= text_field_tag :address_line_1, nil, :class => "form-control", :placeholder => 'address line 1', :type => 'text' %>
+      </div>
+
+      <div class="form-group">
+       <%= label_tag :address_line_2, nil, :class => 'sr-only' %>
+        <%= text_field_tag :address_line_2, nil, :class => "form-control", :placeholder => 'address line 2' %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :city, nil, :class => 'sr-only' %>
+        <%= text_field_tag :city, nil, :class => "form-control", :placeholder => 'city' %>
+      </div>
+
+
+    <div class="form-inline">
+      <div class="form-group">
+        <%= label_tag :state, nil,:class => 'sr-only' %>
+        <%= text_field_tag :state, nil, :class => "form-control", :placeholder => 'eg. CA' %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :zip_code, nil,:class => 'sr-only' %>
+        <%= text_field_tag :zip_code, nil, :class => "form-control", :placeholder => 'enter zip' %>
+      </div>
+    </div> 
+
+    <div class="form-group">
+        <%= label_tag(:billing_address_and_shipping_addess_are_equal?, "Billing address is the same as shipping address  (check box if true)") %>
+        <%= check_box_tag :billing_address_and_shipping_addess_are_equal?, :class => "form-control" %>
+    </div>
+
+
+    <p>Shipping address</p>
+      
+      <div class="form-group">
+        <%= label_tag :address_line_1, nil, :class => 'sr-only' %>
+        <%= text_field_tag :address_line_1, nil, :class => "form-control", :placeholder => 'address line 1', :type => 'text' %>
+      </div>
+
+      <div class="form-group">
+       <%= label_tag :address_line_2, nil, :class => 'sr-only' %>
+        <%= text_field_tag :address_line_2, nil, :class => "form-control", :placeholder => 'address line 2' %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :city, nil, :class => 'sr-only' %>
+        <%= text_field_tag :city, nil, :class => "form-control", :placeholder => 'city' %>
+      </div>
+
+
+    <div class="form-inline">
+      <div class="form-group">
+        <%= label_tag :state, nil,:class => 'sr-only' %>
+        <%= text_field_tag :state, nil, :class => "form-control", :placeholder => 'eg. CA' %>
+      </div>
+
+      <div class="form-group">
+        <%= label_tag :zip_code, nil,:class => 'sr-only' %>
+        <%= text_field_tag :zip_code, nil, :class => "form-control", :placeholder => 'enter zip' %>
+      </div>
+    </div>  
+
     
+
+          
+   <div class="pull-right"> 
     <article>
       <label class="amount">
         <span>Amount <%= number_to_currency((@order.total).to_f/100) %></span>
@@ -13,5 +103,7 @@
             data-amount="<%= @order.total %>"></script>
   <% end %>
 
-  <%= link_to "Return to Shopping", posts_path, class: "btn btn-info btn-register btn-sm all-items-btn" %>
+  </div>
+
+  </div>
 </div>

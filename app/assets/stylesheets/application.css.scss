@@ -410,10 +410,22 @@ body {
 
 // // // // // // // // // // // 
 
-// create order items page Styling
+// create order items and checkout Styling
 
 // // // // // // // 
 .container.cart-add.text-center
+{
+  background: rgba(255, 255, 255, 0.6);
+  padding-bottom: 3em;
+}
+
+.container.checkout.center-block
+{
+  background: rgba(255, 255, 255, 0.6);
+  padding-bottom: 3em;
+}
+
+.container.content-container.center-block.orders.text-center
 {
   background: rgba(255, 255, 255, 0.6);
   padding-bottom: 3em;
