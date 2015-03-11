@@ -259,13 +259,13 @@ body {
   padding-bottom: 0;
 }
 
-.view-post-btn
+.clear-btn
 {
   background: none;
   color: black;
   border: 1px solid black;
 }
-.view-post-btn:hover
+.clear-btn:hover
 {
   background: black;
   color: white;
@@ -316,7 +316,7 @@ body {
 
 // // // // // // // 
 
-.size-buttons-div 
+.canv-selection-div 
 {
   width: 550px;
 }
@@ -341,13 +341,26 @@ body {
   margin: 0 auto;
 }
 
-.rotate90 {
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+.canv-select-btn
+{
+  background: black;
+  color: white;
+  border: 1px solid black;
 }
+.canv-select-btn:hover
+{
+  background: none;
+  color: black;
+  border: 1px solid black;
+}
+
+// .rotate90 {
+//     -webkit-transform: rotate(90deg);
+//     -moz-transform: rotate(90deg);
+//     -o-transform: rotate(90deg);
+//     -ms-transform: rotate(90deg);
+//     transform: rotate(90deg);
+// }
 
 
 
