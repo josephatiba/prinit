@@ -167,9 +167,10 @@ body {
   background-color: black;
 }
 
-.container.indexcont.center-block 
+.container.indiv-post-container 
 {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.6);
+  padding-top: 4em;
 }
 
 
@@ -177,6 +178,11 @@ body {
 // // // // // // // 
     // post index styling
 // // // // // // 
+
+.container.text-center.center-block 
+{
+  background: rgba(255, 255, 255, 0.5);
+}
 
 .indexcont
 {
@@ -287,17 +293,17 @@ body {
   padding-bottom: 0;
 }
 
-.clear-btn
+.clear-btn.slide-btn
 {
   background: none;
   color: black;
-  border: 1px solid black;
+  border: 1px solid white;
 }
-.clear-btn:hover
+.clear-btn.slide-btn:hover
 {
   background: black;
   color: white;
-  border: 1px solid black;
+  border: 1px solid white;
 }
 #gly-div-left
 {
@@ -368,6 +374,18 @@ body {
 {
   margin: 0 auto;
 }
+.clear-btn
+{
+  background: none;
+  color: black;
+  border: 1px solid black;
+}
+.clear-btn:hover
+{
+  background: black;
+  color: white;
+  border: 1px solid black;
+}
 
 .canv-select-btn
 {
@@ -389,6 +407,19 @@ body {
 //     -ms-transform: rotate(90deg);
 //     transform: rotate(90deg);
 // }
+
+// // // // // // // // // // // 
+
+// create order items page Styling
+
+// // // // // // // 
+.container.cart-add.text-center
+{
+  background: rgba(255, 255, 255, 0.6);
+  padding-bottom: 3em;
+}
+
+
 
 
 

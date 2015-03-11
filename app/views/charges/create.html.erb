@@ -1,3 +1,7 @@
-<h2>Thanks, you paid <strong><%= number_to_currency((@order.total).to_f/100) %></strong>!</h2>
+<div class="container orders">
+  
+  <h2>Thanks, you paid <strong><%= number_to_currency((@order.total).to_f/100) %></strong>!</h2>
 
-<%= link_to "Discover More", posts_path, class: "btn btn-info btn-register btn-lg" %>
+  <%= link_to "Discover More", posts_path, class: "btn btn-info btn-register btn-lg" %>
+
+</div>

@@ -35,6 +35,7 @@
         self.viewPrice = true;
 
 
+
         var photos = [];
 
         var carouselPhotos = [];
@@ -49,7 +50,7 @@
     
 
 
-
+        // getting needed dom elements
         var indexImage = document.getElementsByClassName("indexImg");
 
         var slideImage = document.getElementsByClassName("carouselSlide");
@@ -86,7 +87,7 @@
 
         var canvasOptions = canvasOptionsArray[0];
 
-
+        // this function alters the appearance of the canvas option size buttons on the posts show page
         $('.size-button').click(function(){
           console.log($(this).index());
           self.select = $(this).index();
@@ -100,12 +101,12 @@
           
         })
 
-
+        // diplays price when a canvas option is clicked
         self.viewPriceClicked = function (){
           self.viewPrice = false;
         }
 
-
+        // sets class of active the carousel slide photo that photo that corresponds to the index of the thumbnail that was clicked 
         $('.imgDiv').mousedown(function(){
           console.log($(this).index());
           self.idVar = $(this).index();
@@ -115,11 +116,16 @@
           $(activateItems[self.idVar]).addClass('active');
         })
 
-
+        // hides view ___ options button and displays the canvas size options
         self.viewOptionsClicked = function () {
           self.viewOptions = true;
           console.log("should be hidden");
         }
+
+
+        $(document).on("mousedown", ".cart-item-delete", function(){
+          location.reload(true);
+          });
 
         
 
