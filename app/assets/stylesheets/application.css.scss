@@ -38,6 +38,8 @@ $max-height: 100%;
 // // // // // // //
 body { 
   padding-top: 60px;
+  background: url('forum.jpg') no-repeat;
+  background-size: cover;
 
 }
 
@@ -165,6 +167,11 @@ body {
   background-color: black;
 }
 
+.container.indexcont.center-block 
+{
+  background: rgba(255, 255, 255, 0.5);
+}
+
 
 
 // // // // // // // 
@@ -180,9 +187,9 @@ body {
 
 .masonry-container
 {
-  max-width: 80%;
-  border: 3px solid blue;
+  max-width: 60%;
   text-align: center;
+  background: rgba(255, 255, 255, 0.3);
 }
 
 
