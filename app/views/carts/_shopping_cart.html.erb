@@ -16,6 +16,8 @@
 
   <%= link_to 'Check Out', new_charge_path, class: 'btn btn-success' %>
   <input type="button" value="Click here to refresh after deleteting an item!" onClick="window.location.href=window.location.href" class="btn btn-primary pull-right"> 
+  <br>
+  <br>
     <% @order_items.each do |order_item| %>
       <%= render 'carts/cart_row', post: order_item.post, order_item: order_item, show_total: true %>
     <% end %>

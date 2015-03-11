@@ -10,9 +10,14 @@
 
   
 
-              <b > <%= @user.category %> </b>
-              <br>
-              <p class="text-left"> <%= @user.bio %> </p> 
+              <p> <%= @user.category %> </p>
+              
+              <div class="content-container">
+
+                <p class="text-left"> <%= @user.bio %> </p> 
+
+              </div>  
+
               <br>
               <p> <%= @user.contact_info %> </p>
             
@@ -34,10 +39,9 @@
 
     <!-- user posts -->
     <% @user.posts.each do |post| %>
-      <div>
+      
         <%= link_to image_tag(post.image.url(:post_thumbnail)), post %>
-        <p><%= link_to post.title, post %></p>
-        </div>  
+     
     <% end %>   
       
         </div>
