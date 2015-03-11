@@ -7,20 +7,10 @@
 <div class="modal fade" id="slide-modal">
 
   <button type="button" id="modal-close" class="close" data-dismiss="modal" aria-hidden="true"><%= link_to(image_tag('noun_100498_cc.png', alt: "", id: "modal-close")) %></button>
- 
 
-<!-- carousel controls -->
-    <div id="gly-div-left">
-         <a class="left carousel-control" href="#slide-carousel" data-slide="prev"><span class="glyphicon glyphicon-menu-left"></span></a>
-      </div>
-        <div id="gly-div-right">
-        <a class="right carousel-control" href="#slide-carousel" data-slide="next"><span class="glyphicon glyphicon-menu-right"></span></a>
-      </div>
-
-
-  <div class="modal-dialog modal-lg">
+  <div class="modal-dialog modal-lg" id="modal-placement">
     <div class="modal-content">
-      <div class="modal-body">
+      <div id="modal-body">
 
 <!-- carousel body -->
   <div id="slide-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
@@ -34,9 +24,9 @@
             <%= image_tag(post.image.url(:carousel_slide), alt: post.description, class: "carouselSlide") %>
             <div class="container">
                 <div class="carousel-caption">
-                    <h1><%= link_to(post.title, posts_path(@post), class: "individual-post-title") %></h1>
-                    <p>by <%= post.user.username %></p>
-                    <p>
+                    <h5><%= link_to(post.title, post_path(post), class: "carousel-post-info") %></h5>
+                    <p><%= link_to("by " + post.user.username, post_path(post), class: "carousel-post-info") %></p>
+  
                 </div>
             </div>
           </div>
@@ -53,6 +43,13 @@
       
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
+  <!-- carousel controls -->
+      <div id="gly-div-left">
+         <a class="left carousel-control" href="#slide-carousel" data-slide="prev"><span class="glyphicon glyphicon-menu-left"></span></a>
+      </div>
+      <div id="gly-div-right">
+        <a class="right carousel-control" href="#slide-carousel" data-slide="next"><span class="glyphicon glyphicon-menu-right"></span></a>
+      </div>
 </div><!-- /.modal -->
 
 
