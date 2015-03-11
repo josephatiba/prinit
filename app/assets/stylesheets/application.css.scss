@@ -15,10 +15,9 @@
  */
 
 // First set or import your overrides
-$textColor: #000;
+
 
 // Then load variables
-@import "bootswatch/journal/variables";
 
 @import "bootstrap-sprockets";
 @import "bootswatch/yeti/variables";
@@ -37,7 +36,10 @@ $max-height: 100%;
 // HTML & Body styling
 
 // // // // // // //
-body { padding-top: 60px; }
+body { 
+  padding-top: 60px;
+
+}
 
 #view-container
 {
@@ -258,28 +260,65 @@ body { padding-top: 60px; }
   background-size: 100% auto;
   opacity: 1;
   .jumbotron 
-  {
+  { 
+    position: relative;
+    top: 20em;
+    margin: 0 0;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
     background: none;
     .jumbotron-text 
     {
-      position: absolute;
-      top: 30%;
-      left: 25%;
+      position: relative;
+      text-align: center;
     }
   }
 }
 
 // Header | navbar styling
+.header 
+{
+  background: none;
+}
 
 .navbar 
 {
   margin-bottom: 0;
 }
 
-.upload-icon
+.navbar 
 {
-  height: 25px;
-  width: auto;
+  margin-bottom: 0;
+}
+
+.navbar-link
+{
+  color: black;
+}
+
+// .upload-icon
+// {
+//   height: 25px;
+//   width: auto;
+// }
+
+#nav-styles
+{
+  background: none;
+  font-size: 1.1em;
+  margin-top: 10px;
+}
+
+.navbar-brand
+{
+  background-color: black;
+}
+
+.nav.navbar-nav li a {
+  color: black;
+  font-weight: 400;
 }
 
 
