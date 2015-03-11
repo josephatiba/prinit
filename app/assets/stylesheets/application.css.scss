@@ -147,11 +147,22 @@ body {
 {
   background-color: black;
 }
+.navbar-header > a .navbar-brand:hover
+{
+  color: black;
+  background: rgba(0, 0, 0, 0.85);
+  display: inline-block;
 
+}
 
 .nav.navbar-nav li a {
   color: black;
   font-weight: 400;
+}
+
+.icon-bar
+{
+  background-color: black;
 }
 
 
@@ -220,6 +231,8 @@ body {
 {
   z-index: 10;
 }
+
+
 // // // // // // // // // // // 
 
 // index Slide modal & carousel styling
