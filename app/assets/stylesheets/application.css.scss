@@ -62,6 +62,15 @@ body {
   padding-bottom: 0;
 }
 
+.alert
+{
+  // background: rgba(255, 255, 255, 0.6);
+}
+.notice
+{
+  // background: rgba(255, 255, 255, 0.6);
+}
+
 // // // // // // // // // // // 
 
 // Home Page Styling
@@ -144,6 +153,13 @@ body {
   background: none;
   font-size: 1.1em;
   margin-top: 10px;
+}
+
+.collapse.navbar-collapse
+{
+   background: rgba(255, 255, 255, 0.8);
+   padding-right: 1em;
+   text-align: center;
 }
 
 .navbar-brand
