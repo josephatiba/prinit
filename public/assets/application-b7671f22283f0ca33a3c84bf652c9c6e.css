@@ -9017,7 +9017,7 @@ label,
 /* line 39, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 body {
   padding-top: 60px;
-  background: url(/assets/forum.jpg) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/forum.jpg?X-Amz-Date=20150312T025123Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=5005598bc81b73a7c6299820ac8476b0136101c7b9522d993e253adbf3ea8ee5&X-Amz-Credential=ASIAJXWNN55MHB4MWG2A/20150312/us-west-1/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEGkagAJiUqQtZdmojUZkaIYku8E6NtqC3kenoKezLDPFkqRaCVeUAijQc9/6A2CZDV9XPpGpHattxY3in5rQ7oA23PKM1QP7xuviio3jQhGnhD/whR98WtSomWSvWXiSkoetuzUpPXyaQQRX2HaWyxzeKvpIgtCbCPMMCsO5Wg52Pg8xeFt0WhxVNLiJsebS1WaYdw877Tc0YpVKq3MswqbpBX3MASYMQOQSWLYF4ZEGDV2ukWVxLQgSX2MnC0PIjVUubovolCBGVfuMY9WTA%2BYVQRs9Ryx1V545DwFeh6iyBBcGWgJO%2BE21QJpl2kuKpmha/7j6caxgySseSM227W7MnrJBIKCsg6gF) no-repeat;
   background-size: cover;
 }
 
@@ -9048,7 +9048,7 @@ body {
   bottom: 0;
   left: 0;
   z-index: 2;
-  background: url(/assets/empty-canvas.jpg) no-repeat;
+  background: url(https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/empty-canvas.jpg?X-Amz-Date=20150312T025312Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=86e9617b6e54194e9c6d4d770a1e9b7daaf9c816a49e940f3cbcc2607025877c&X-Amz-Credential=ASIAJXWNN55MHB4MWG2A/20150312/us-west-1/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEGkagAJiUqQtZdmojUZkaIYku8E6NtqC3kenoKezLDPFkqRaCVeUAijQc9/6A2CZDV9XPpGpHattxY3in5rQ7oA23PKM1QP7xuviio3jQhGnhD/whR98WtSomWSvWXiSkoetuzUpPXyaQQRX2HaWyxzeKvpIgtCbCPMMCsO5Wg52Pg8xeFt0WhxVNLiJsebS1WaYdw877Tc0YpVKq3MswqbpBX3MASYMQOQSWLYF4ZEGDV2ukWVxLQgSX2MnC0PIjVUubovolCBGVfuMY9WTA%2BYVQRs9Ryx1V545DwFeh6iyBBcGWgJO%2BE21QJpl2kuKpmha/7j6caxgySseSM227W7MnrJBIKCsg6gF) no-repeat;
   background-size: 100% auto;
   opacity: 1;
 }
