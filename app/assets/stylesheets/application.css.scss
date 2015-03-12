@@ -456,7 +456,7 @@ body {
 
 // // // // // // // // // // // 
 
-// User sign-up page Styling
+// User sign-up and login page Styling
 
 // // // // // // // 
 .content-container.sign-up
@@ -469,7 +469,13 @@ body {
   padding-bottom: 2.5%;
 }
 
-
+.content-container.center-block > .col-xs-6.col-xs-offset-3
+{
+  background: rgba(255, 255, 255, 0.6);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 3.5%;
+}
 
 
 
