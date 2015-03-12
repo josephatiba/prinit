@@ -18,7 +18,7 @@
     <div class="carousel-inner">
         
             <% @posts.each do |post| %>
-             <% if post.public == true %>
+             <% if post.public %>
 
             <div class="item {{main.activeCarouselIndex}}">
             <%= image_tag(post.image.url(:carousel_slide), alt: post.description, class: "carouselSlide") %>
@@ -60,7 +60,7 @@
         <!-- user posts -->
         <div class="user-post-div">
             <% @posts.each do |post| %>
-            <% if post.public == true %>
+            <% if post.public %>
                   <div class="imgDiv">   
                    <a class="thumbnail-modal-trigger" data-toggle="modal" href='#slide-modal' ng-click="main.setIdVar()"><%= image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block") %></a>
                   </div>
