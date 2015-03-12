@@ -1,7 +1,5 @@
-<div class="container indexcont center-block" ng-mouseenter="main.imgArrayFunc();">
+<div class="container indexcont center-block">
 
-
- 
 
 <!-- Large modal -->
 <div class="modal fade" id="slide-modal">
@@ -35,12 +33,11 @@
             <% end %>
            <% end %>
         
-    </div>
-
+      </div>
     </div>
 
         
-      </div>
+    </div>
       
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -63,7 +60,7 @@
             <% @posts.each do |post| %>
             <% if post.public %>
                   <div class="imgDiv">   
-                   <a class="thumbnail-modal-trigger" data-toggle="modal" href='#slide-modal' ng-click="main.setIdVar()"><%= image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block") %></a>
+                   <a class="thumbnail-modal-trigger btn" data-toggle="modal" href='#slide-modal'><%= image_tag(post.image.url(:post_thumbnail), class: "indexImg center-block") %></a>
                   </div>
               <% end %> 
             <% end %>  
