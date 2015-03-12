@@ -9017,14 +9017,14 @@ label,
 /* line 39, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 body {
   padding-top: 60px;
-  background: url(https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/forum.jpg);
+  background: url(https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/high-res-school-of-athens.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 /* line 47, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 #view-container {
-  padding: 0;
+  margin-top: 100px;
 }
 
 /* line 52, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
@@ -9041,7 +9041,7 @@ body {
   padding-bottom: 0;
 }
 
-/* line 72, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 81, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .home-container {
   position: fixed;
   top: 0;
@@ -9054,7 +9054,7 @@ body {
   background-size: 100% auto;
   opacity: 1;
 }
-/* line 84, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 93, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .home-container .jumbotron {
   position: relative;
   top: 20em;
@@ -9065,105 +9065,112 @@ body {
   padding-bottom: 0;
   background: none;
 }
-/* line 94, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 103, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .home-container .jumbotron .jumbotron-text {
   position: relative;
   text-align: center;
 }
-/* line 98, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 107, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .home-container .jumbotron .jumbotron-text .discover-btn {
   background: none;
   color: black;
   border: 1px solid black;
 }
-/* line 104, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 113, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .home-container .jumbotron .jumbotron-text .discover-btn:hover {
   background: black;
   color: white;
   border: 1px solid black;
 }
 
-/* line 117, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 126, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .header {
   background: none;
 }
 
-/* line 122, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 131, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .navbar {
   margin-bottom: 0;
 }
 
-/* line 127, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 136, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .navbar {
   margin-bottom: 0;
 }
 
-/* line 132, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 141, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .navbar-link {
   color: black;
 }
 
-/* line 143, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 152, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 #nav-styles {
   background: none;
   font-size: 1.1em;
   margin-top: 10px;
 }
 
-/* line 150, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 159, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+.collapse.navbar-collapse {
+  background: rgba(255, 255, 255, 0.6);
+  padding-right: 1em;
+  text-align: center;
+}
+
+/* line 166, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .navbar-brand {
   background-color: black;
 }
 
-/* line 154, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 170, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .navbar-header > a .navbar-brand:hover {
   color: black;
   background: rgba(0, 0, 0, 0.85);
   display: inline-block;
 }
 
-/* line 161, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 177, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .nav.navbar-nav li a {
   color: black;
   font-weight: 400;
 }
 
-/* line 167, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 183, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .icon-bar {
   background-color: black;
 }
 
-/* line 172, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 188, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .container.indiv-post-container {
   background: rgba(255, 255, 255, 0.6);
   padding-top: 4em;
 }
 
-/* line 184, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 200, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .container.text-center.center-block {
   background: rgba(255, 255, 255, 0.5);
 }
 
-/* line 189, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 205, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .indexcont {
-  border: 1px solid black;
   padding-left: 0;
   padding-right: 0;
 }
 
-/* line 196, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 212, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .masonry-container {
   max-width: 60%;
   text-align: center;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
+  padding-top: 0.5em;
 }
 
-/* line 204, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 221, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .post-index-title {
   position: relative;
 }
 
-/* line 211, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 228, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .imgDiv {
   position: relative;
   display: inline-block;
@@ -9172,7 +9179,7 @@ body {
   margin-bottom: 1em;
 }
 
-/* line 220, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 237, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .thumbnail-modal-trigger {
   padding-top: 0;
   padding-left: 0;
@@ -9180,53 +9187,53 @@ body {
   padding-bottom: 0;
 }
 
-/* line 229, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 246, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .img-link {
   list-style: none;
   margin: 0 auto;
 }
 
-/* line 235, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 252, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .max-height {
   min-height: 100%;
 }
 
-/* line 240, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 257, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .max-width {
   width: 100%;
 }
 
-/* line 245, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 262, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .top-layer {
   z-index: 10;
 }
 
-/* line 258, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 275, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .carouselSlide {
   margin: 0 auto;
 }
 
-/* line 263, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 280, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .modal {
   background: rgba(0, 0, 0, 0.85);
 }
 
-/* line 267, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 284, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .modal-header {
   background: rgba(0, 0, 0, 0.85);
 }
 
-/* line 271, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 288, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .modal-dialogue {
   background: rgba(0, 0, 0, 0.85);
 }
 
-/* line 276, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 293, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .carousel-inner {
   background: rgba(0, 0, 0, 0.85);
 }
 
-/* line 281, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 298, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 #modal-close {
   height: 50px;
   background-color: white;
@@ -9235,7 +9242,7 @@ body {
   float: right;
 }
 
-/* line 289, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 306, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 #modal-body {
   background: rgba(0, 0, 0, 0.85);
   padding-top: 0;
@@ -9244,28 +9251,28 @@ body {
   padding-bottom: 0;
 }
 
-/* line 298, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 315, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .clear-btn.slide-btn {
   background: none;
   color: black;
   border: 1px solid white;
 }
 
-/* line 304, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 321, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .clear-btn.slide-btn:hover {
   background: black;
   color: white;
   border: 1px solid white;
 }
 
-/* line 310, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 327, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 #gly-div-left {
   position: absolute;
   top: 50%;
   left: 5%;
 }
 
-/* line 317, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 334, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 #gly-div-right {
   position: absolute;
   top: 50%;
@@ -9273,105 +9280,136 @@ body {
   font-size: 4em;
 }
 
-/* line 325, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 342, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 #modal-placement {
   position: relative;
   top: 13em;
 }
 
-/* line 331, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 348, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .carousel-post-info {
   text-decoration: none;
   color: white;
   font-size: 1em;
 }
 
-/* line 337, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 354, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .carousel-post-info:hover {
   text-decoration: none;
   color: black;
   font-size: 1em;
 }
 
-/* line 355, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 372, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+.container.indiv-post-container {
+  padding-bottom: 1em;
+}
+
+/* line 377, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .canv-selection-div {
   width: 550px;
 }
 
-/* line 360, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 382, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .size-button {
   margin-top: 5px;
 }
 
-/* line 365, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 387, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .canvas-price {
   text-align: center;
 }
 
-/* line 369, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 391, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .addToCartFormDiv {
   text-align: center;
   width: auto;
 }
 
-/* line 375, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 397, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .form-group {
   margin: 0 auto;
 }
 
-/* line 379, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 401, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .clear-btn {
   background: none;
   color: black;
   border: 1px solid black;
 }
 
-/* line 385, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 407, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .clear-btn:hover {
   background: black;
   color: white;
   border: 1px solid black;
 }
 
-/* line 392, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 414, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .canv-select-btn {
   background: black;
   color: white;
   border: 1px solid black;
 }
 
-/* line 398, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 420, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .canv-select-btn:hover {
   background: none;
   color: black;
   border: 1px solid black;
 }
 
-/* line 418, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 440, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .container.cart-add.text-center {
+  padding-top: 1em;
   background: rgba(255, 255, 255, 0.6);
   padding-bottom: 3em;
 }
 
-/* line 424, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 447, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .container.checkout.center-block {
   background: rgba(255, 255, 255, 0.6);
   padding-bottom: 3em;
 }
 
-/* line 430, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 453, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .container.content-container.center-block.orders.text-center {
   background: rgba(255, 255, 255, 0.6);
   padding-bottom: 3em;
 }
 
-/* line 446, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
-.padding-left {
-  display: inline-block;
+/* line 469, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+.container.post-show.text-center.center-block {
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
-/* line 452, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+/* line 477, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 .content-container {
   max-width: 81%;
   margin: 0 auto;
+}
+
+/* line 483, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+.small-container {
+  max-width: 50%;
+  display: inline-block;
+}
+
+/* line 494, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+.content-container.sign-up {
+  background: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  padding-left: 5%;
+  padding-top: 2.5%;
+  padding-right: 5%;
+  padding-bottom: 2.5%;
+}
+
+/* line 504, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
+.col-xs-6.col-xs-offset-3 {
+  background: rgba(255, 255, 255, 0.6);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 1.5em;
 }

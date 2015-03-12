@@ -42176,6 +42176,7 @@ angular.module('ngResource', ['ng']).
 
         self.testFunc = function(){
           console.log('taterSalad');
+          console.log(photoArray);
 
       
         }
