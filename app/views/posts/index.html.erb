@@ -18,7 +18,7 @@
     <div class="carousel-inner">
         
             <% @posts.each do |post| %>
-             <% if post.public %>
+             <% if post.public == true %>
 
             <div class="item {{main.activeCarouselIndex}}">
             <%= image_tag(post.image.url(:carousel_slide), alt: post.description, class: "carouselSlide") %>
