@@ -16,11 +16,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = current_user.post.new
+    @post = current_user.posts.new
   end
 
   def create
-    @post = current_user.post.new(post_params)
+    @post = current_user.posts.new(post_params)
     if @post.save
       redirect_to @post
     else
