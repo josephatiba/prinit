@@ -1,32 +1,34 @@
 
 
 
-<div class="container text-center center-block">
-  <div class="row">
+<div class="container post-show text-center center-block">
+  
+        <div>
+            <%= image_tag(@user.prof_pic.url(:profile_pic)) %>       
+        </div>
+  
+              
+              <div class="small-container">
 
-    <%= image_tag(@user.prof_pic.url(:profile_pic)) %>
-   
               <h1> <%= @user.first_name %>  <%= @user.last_name %></h1>
 
-  
+               <p class="text-left">Category: <%= @user.category %> </p>
 
-              <p> <%= @user.category %> </p>
-              
-              <div class="content-container">
+                <p class="text-left">Bio: <%= @user.bio %> </p> 
 
-                <p class="text-left"> <%= @user.bio %> </p> 
+                 <p class="text-left">Contact Info: <%= @user.contact_info %> </p>
 
               </div>  
 
               <br>
-              <p> <%= @user.contact_info %> </p>
+             
             
-        </div>
+      
 
   <div class="row">    
     <% if current_user == @user %>
-      <%= link_to "Edit #{@user.first_name}'s Information", edit_user_path(@user) %>
-        <%= link_to "Cancel #{@user.first_name}'s account?", :user, method: :delete, data: {confirm: "Are you sure you want to remove your account, #{@user.first_name}? You are Magnificent and we'd like you to stay!"} %>
+      <%= link_to "Edit #{@user.first_name}'s Information", edit_user_path(@user), class: "clear-btn btn" %>
+        <%= link_to("Cancel #{@user.first_name}'s account?", :user, method: :delete, data: {confirm: "Are you sure you want to remove your account, #{@user.first_name}? You are Magnificent and we'd like you to stay!"}, class: "clear-btn btn") %>
     <% end %>
   </div> 
 
@@ -35,7 +37,7 @@
 
         <div class="container content-container">
           <div id="posts" class="center-block"> 
-            <h6> <%= @user.first_name %>'s Porftolio </h6>
+            <h3> <%= @user.first_name %>'s Portfolio </h3>
 
     <!-- user posts -->
     <% @user.posts.each do |post| %>

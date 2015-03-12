@@ -38,14 +38,14 @@ $max-height: 100%;
 // // // // // // //
 body { 
   padding-top: 60px;
-  background: image-url('https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/forum.jpg');
+  background: image-url('https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/high-res-school-of-athens.jpg');
   background-size: cover;
   background-repeat:  no-repeat;
 }
 
 #view-container
 {
- padding: 0;
+ margin-top: 100px;
 }
 
 .notice, .alert 
@@ -438,6 +438,7 @@ body {
 // // // // // // // 
 .container.cart-add.text-center
 {
+  padding-top: 1em;
   background: rgba(255, 255, 255, 0.6);
   padding-bottom: 3em;
 }
@@ -464,16 +465,24 @@ body {
 
 // // // // // // // 
 
-.padding-left
+.container.post-show.text-center.center-block
 {
-  display: inline-block;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
+
 
 
 .content-container
 {
   max-width: 81%;
   margin: 0 auto;
+}
+
+.small-container
+{
+  max-width: 50%;
+  display: inline-block;
 }
 
 // // // // // // // // // // // 
@@ -491,12 +500,12 @@ body {
   padding-bottom: 2.5%;
 }
 
-.content-container.center-block > .col-xs-6.col-xs-offset-3
+.col-xs-6.col-xs-offset-3
 {
   background: rgba(255, 255, 255, 0.6);
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 3.5%;
+  padding-bottom: 1.5em;
 }
 
 

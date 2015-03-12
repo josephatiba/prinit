@@ -3,10 +3,10 @@
    <div class="col-xs-6 col-xs-offset-3">
         <h3>Edit User!</h3>
 
-        <%= @user.errors.full_messages %>
+        <h2 class="alert notice"><%= @user.errors.full_messages %></h2>
 
         <%= form_for @user do |f| %>
-          
+           
 
           <div class="form-group">
             <%= f.label :prof_pic %>
@@ -53,7 +53,7 @@
             <%= f.password_field :password_confirmation, class: "form-control" %>
           </div>
 
-              
+              <br />
 
           <div>
              <%= f.submit "Save Changes" %>
