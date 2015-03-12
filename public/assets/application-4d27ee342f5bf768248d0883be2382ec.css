@@ -9017,7 +9017,7 @@ label,
 /* line 39, /Users/jatiba/wdi/prinit/app/assets/stylesheets/application.css.scss */
 body {
   padding-top: 60px;
-  background: url("forum.jpg") no-repeat;
+  background: url(/assets/forum.jpg) no-repeat;
   background-size: cover;
 }
 
@@ -9048,7 +9048,7 @@ body {
   bottom: 0;
   left: 0;
   z-index: 2;
-  background: url("empty-canvas.jpg") no-repeat;
+  background: url(/assets/empty-canvas.jpg) no-repeat;
   background-size: 100% auto;
   opacity: 1;
 }
