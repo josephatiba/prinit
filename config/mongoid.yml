@@ -104,4 +104,3 @@ production:
        refresh_interval: 10
        
        #
-       ssl: true
