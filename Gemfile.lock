@@ -319,6 +319,7 @@ DEPENDENCIES
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   spring
+  sprockets-rails
   stripe!
   thin
   twitter
