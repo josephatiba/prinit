@@ -1,4 +1,6 @@
 class OrderItemsController < ApplicationController
+    before_action :authorize, only: [:create, :update, :destroy]
+
    def create
     @order = current_order
     @order_item = @order.order_items.new(order_item_params)
@@ -24,7 +26,14 @@ class OrderItemsController < ApplicationController
     redirect_to posts_path
   end
 private
+
   def order_item_params
     params.require(:order_item).permit(:quantity, :post_id, :file_url, :variant_id)
+  end
+
+  def authorize
+    if @order_item.order.user != current_user
+      redirect_to login_path
+    end
   end
 end
