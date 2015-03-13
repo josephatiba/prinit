@@ -19,6 +19,9 @@
 
 // Then load variables
 
+
+
+
 @import "bootstrap-sprockets";
 @import "bootswatch/yeti/variables";
 @import "bootstrap";
@@ -41,7 +44,21 @@ body {
   background: image-url('https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/high-res-school-of-athens.jpg');
   background-size: cover;
   background-repeat:  no-repeat;
+  @media screen and (max-width: 1200px) {
+    padding-top: 60px;
+    background: image-url('https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/phone.jpg');
+    background-size: cover;
+    background-repeat:  no-repeat;
+  }
 }
+
+// @media (min-width: @screen-sm-min) { ... }
+
+// /* Medium devices (desktops, 992px and up) */
+// @media (min-width: @screen-md-min) { ... }
+
+// /* Large devices (large desktops, 1200px and up) */
+// @media (min-width: @screen-lg-min) { ... }
 
 #view-container
 {
@@ -89,6 +106,18 @@ body {
   background-repeat:  no-repeat;
   background-size: 100% auto;
   opacity: 1;
+  @media screen and (max-width: 1148px) { 
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    left: 0; 
+    z-index: 2;
+    background: image-url('https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/phone.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    opacity: 1;
+  }
   .jumbotron 
   { 
     position: relative;
