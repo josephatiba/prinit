@@ -1,8 +1,7 @@
 class OrderItemsController < ApplicationController
-    before_action :authorize, only: [:create, :update, :destroy]
+    before_action :logged_in_user, only: [:create, :update, :destroy]
 
    def create
-    if !logged_in?
       @order = current_order
       @order_item = @order.order_items.new(order_item_params)
       @order.save
@@ -10,16 +9,15 @@ class OrderItemsController < ApplicationController
          @order_item.save
           session[:order_id] = @order.id.to_s
       end
-    else
-      redirect_to login_path
-    end
   end
 
   def update
-    @order = current_order
-    @order_item = @order.order_items.find(params[:id])
-    @order_item.update_attributes(order_item_params)
-    @order_items = @order.order_items
+    if !logged_in_user
+      @order = current_order
+      @order_item = @order.order_items.find(params[:id])
+      @order_item.update_attributes(order_item_params)
+      @order_items = @order.order_items
+    end
   end
 
   def destroy
@@ -35,9 +33,4 @@ private
     params.require(:order_item).permit(:quantity, :post_id, :file_url, :variant_id)
   end
 
-  def authorize
-    if @order_item.order.user != current_user
-      redirect_to login_path
-    end
-  end
 end

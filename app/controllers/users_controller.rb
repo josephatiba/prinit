@@ -9,8 +9,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:notice] = "Thank you for signing up! Please log in to confirm your registration."
-      redirect_to login_path
+      flash[:notice] = "You are now logged in!"
+      redirect_back_or @user
     else
       flash[:alert] = "There was a problem creating your account. Please try again"
       redirect_to :back
