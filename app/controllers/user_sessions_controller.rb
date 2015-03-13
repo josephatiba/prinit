@@ -8,10 +8,10 @@ class UserSessionsController < ApplicationController
     if user && user.authenticate(params[:password])
       # sets a cookie / stores a session
       session[:user_id] = user.id
-       flash[:notice] = "You are now logged in!"
-      redirect_to posts_path
+      flash[:notice] = "You are now logged in!"
+      redirect_back_or user
     else
-       flash[:alert] = "The email or password you entered is incorrect. Please try again."
+      flash[:alert] = "The email or password you entered is incorrect. Please try again."
       redirect_to login_path
     end
   end

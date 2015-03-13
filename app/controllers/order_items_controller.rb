@@ -2,12 +2,16 @@ class OrderItemsController < ApplicationController
     before_action :authorize, only: [:create, :update, :destroy]
 
    def create
-    @order = current_order
-    @order_item = @order.order_items.new(order_item_params)
-    @order.save
-    if @order.save
-       @order_item.save
-        session[:order_id] = @order.id.to_s
+    if !logged_in?
+      @order = current_order
+      @order_item = @order.order_items.new(order_item_params)
+      @order.save
+      if @order.save
+         @order_item.save
+          session[:order_id] = @order.id.to_s
+      end
+    else
+      redirect_to login_path
     end
   end
 

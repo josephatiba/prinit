@@ -3,7 +3,8 @@ require_relative 'printful'
 
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
-  before_action :authorize, only: [:edit, :update, :destroy]
+  before_action :logged_in_user, only: [:create, :edit, :update, :destroy]
+  # before_action :authorize, only: [:edit, :update, :destroy]
 
 
   def index
@@ -18,10 +19,8 @@ class PostsController < ApplicationController
   end
 
   def new
-    if !logged_in?
+    if !logged_in_user
       @post = current_user.posts.new
-    else
-      redirect_to login_path
     end
   end
 
@@ -64,10 +63,10 @@ class PostsController < ApplicationController
     params.require(:post).permit(:title, :description, :price, :public, :active, :two_to_three, :two_to_three_l, :image, :tile, :user, :post_thumbnail, :profile_pic, :prof_pic, :carousel_slide)
   end
 
-  def authorize
-    if @post.user != current_user
-      redirect_to @post
-    end
-  end
+  # def authorize
+  #   if @post.user != current_user
+  #     redirect_to @post
+  #   end
+  # end
 
 end
