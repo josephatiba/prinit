@@ -418,7 +418,7 @@ body {
 
 .canv-selection-div 
 {
-  width: 550px;
+  max-width: 100%;
 }
 
 .size-button
@@ -464,6 +464,14 @@ body {
   background: none;
   color: black;
   border: 1px solid black;
+}
+
+.input-group.post-indiv
+{
+  @media screen and (max-width: 800px) {
+    float: left;
+
+  }
 }
 
 // .rotate90 {
@@ -526,6 +534,11 @@ body {
 {
   max-width: 50%;
   display: inline-block;
+}
+
+.center-block.version
+{
+  max-width: 100%;
 }
 
 // // // // // // // // // // // 
