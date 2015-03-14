@@ -197,6 +197,9 @@ body {
 .navbar-brand
 {
   background-color: black;
+  @media screen and (max-width: 800px) {
+  margin-left: 20px;
+  }
 }
 .navbar-header > a .navbar-brand:hover
 {
@@ -466,13 +469,13 @@ body {
   border: 1px solid black;
 }
 
-.input-group.post-indiv
-{
-  @media screen and (max-width: 800px) {
-    float: left;
+// .input-group.post-indiv
+// {
+//   @media screen and (max-width: 800px) {
+//     float: left;
 
-  }
-}
+//   }
+// }
 
 // .rotate90 {
 //     -webkit-transform: rotate(90deg);
@@ -518,8 +521,13 @@ body {
 
 .container.post-show.text-center.center-block
 {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.user-show-img
+{
+ max-width: 30%; 
 }
 
 
