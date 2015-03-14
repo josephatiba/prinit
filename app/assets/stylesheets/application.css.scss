@@ -44,8 +44,11 @@ body {
   background: image-url('https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/high-res-school-of-athens.jpg');
   background-size: cover;
   background-repeat:  no-repeat;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1469px) {
     padding-top: 60px;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     background: image-url('https://s3-us-west-1.amazonaws.com/prinitapp/backgrounds/phone.jpg');
     background-size: cover;
     background-repeat:  no-repeat;
@@ -194,6 +197,9 @@ body {
 .navbar-brand
 {
   background-color: black;
+  @media screen and (max-width: 800px) {
+  margin-left: 20px;
+  }
 }
 .navbar-header > a .navbar-brand:hover
 {
@@ -242,7 +248,7 @@ body {
   max-width: 60%;
   text-align: center;
   background: rgba(255, 255, 255, 0.5);
-  padding-top: 0.5em;
+  padding-top: 0.5%;
 }
 
 
@@ -253,13 +259,15 @@ body {
 
 
 
+
 .imgDiv 
 {
   position: relative;
   display: inline-block;
-  padding-right: 0.5em;
-  padding-left: 0.5em;
-  margin-bottom: 1em;
+  padding-right: 0.5%;
+  padding-left: 0.5%;
+  margin-bottom: 0.5%;
+  max-width: 30%
 }
 
 .thumbnail-modal-trigger 
@@ -268,6 +276,15 @@ body {
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
+}
+
+.indexImg{
+  @media screen and (max-width: 1200px) {
+    max-width: 100%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 1%
+  }
 }
 
 
@@ -404,7 +421,7 @@ body {
 
 .canv-selection-div 
 {
-  width: 550px;
+  max-width: 100%;
 }
 
 .size-button
@@ -452,6 +469,14 @@ body {
   border: 1px solid black;
 }
 
+// .input-group.post-indiv
+// {
+//   @media screen and (max-width: 800px) {
+//     float: left;
+
+//   }
+// }
+
 // .rotate90 {
 //     -webkit-transform: rotate(90deg);
 //     -moz-transform: rotate(90deg);
@@ -496,8 +521,13 @@ body {
 
 .container.post-show.text-center.center-block
 {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.user-show-img
+{
+ max-width: 30%; 
 }
 
 
@@ -512,6 +542,11 @@ body {
 {
   max-width: 50%;
   display: inline-block;
+}
+
+.center-block.version
+{
+  max-width: 100%;
 }
 
 // // // // // // // // // // // 
@@ -534,7 +569,7 @@ body {
   background: rgba(255, 255, 255, 0.6);
   padding-left: 5%;
   padding-right: 5%;
-  padding-bottom: 1.5em;
+  padding-bottom: 1.5%;
 }
 
 

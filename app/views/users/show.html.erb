@@ -42,7 +42,7 @@
     <!-- user posts -->
     <% @user.posts.each do |post| %>
       
-        <%= link_to image_tag(post.image.url(:post_thumbnail)), post %>
+        <%= link_to image_tag(post.image.url(:post_thumbnail), class: "user-show-img"), post %>
      
     <% end %>   
       
