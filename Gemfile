@@ -39,6 +39,10 @@ gem 'masonry-rails', '~> 0.2.4'
 
 gem 'bson_ext'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
+
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'bootswatch-rails', '~> 3.2.4'
