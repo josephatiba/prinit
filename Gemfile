@@ -43,6 +43,14 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
+gem 'factory_girl_rails'
+
+group :test do
+  gem 'capybara', '~> 2.4.4'
+end
+
+gem 'database_cleaner', '~> 1.4.1'
+
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'bootswatch-rails', '~> 3.2.4'
