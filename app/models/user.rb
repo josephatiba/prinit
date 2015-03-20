@@ -5,11 +5,15 @@ class User
   has_many :orders
 
 
-  validates :username, uniqueness: { case_sensitive: false }
+  validates :username, presence: true, uniqueness: { case_sensitive: false }
 
   validates :email, presence: true, uniqueness: { case_sensitive: false }, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i }
 
   validates :password, presence: true, length: { in: 2..20 }, confirmation: true, on: [:create, :update] # :if => :password, :unless => :password_digest.present?
+
+  validates :first_name, presence: true
+
+  validates :last_name, presence: true
 
   attr_reader :password, :password_confirmation
 

@@ -37,7 +37,7 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.strategy = :truncation
     DatabaseCleaner.clean_with(:truncation)
   end
 
@@ -49,6 +49,6 @@ RSpec.configure do |config|
 
   config.include(Capybara::DSL, :type => :feature)
   config.infer_spec_type_from_file_location!
-  onfig.include Capybara::DSL
+  config.include Capybara::DSL
   config.include FactoryGirl::Syntax::Methods
 end
