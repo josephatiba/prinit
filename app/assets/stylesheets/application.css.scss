@@ -123,23 +123,23 @@ body {
   }
   .jumbotron 
   { 
-    position: absolute;
-    top: 50%;
+    // position: absolute;
+    
     display: inline-block;
     width: 100%;
     margin: 0 0;
-    padding-top: 0;
+    padding-top: 23%;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 0;
     background: none;
     .jumbotron-text 
     {
-      position: relative;
-      margin: 0 auto;
-      display: inline-block;
-      left: 25%;
-      text-align: center;
+      // position: relative;
+      // margin: 0 auto;
+      // display: inline-block;
+      // left: 25%;
+      // text-align: center;
       .discover-btn
       {
         background: none;
