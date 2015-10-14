@@ -26,7 +26,9 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
-gem 'mongoid', '~> 4.0.0'
+gem 'mongo', '~> 2.1'
+gem 'bson', '~> 3.0'
+gem 'mongoid', '~> 5.0.0'
 
 gem 'angular-rails-templates'
 
@@ -37,7 +39,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 
 gem 'masonry-rails', '~> 0.2.4'
 
-gem 'bson_ext'
+# gem 'bson_ext'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
@@ -63,8 +65,7 @@ gem 'figaro'
 gem 'rails_12factor', group: :production
 gem 'thin', group: :production
 
-gem 'carrierwave'
-gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
+gem 'carrierwave-mongoid', '~> 0.8.1'
 
 gem 'fog'         # required for Amazon S3
 gem 'mini_magick' # for post-upload image processing
